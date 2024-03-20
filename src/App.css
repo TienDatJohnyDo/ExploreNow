@@ -28,11 +28,12 @@
 /* Styles for the centered square */
 .centered-rectangle {
   width: 400px; /* iPhone 15 width in pixels */
-  height: 970px; /* iPhone 15 height in pixels */
+  height: 95vh; /* 60% of the viewport height */
   background-color: white;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
   color:#282c34; 
   z-index: 1;
 }
