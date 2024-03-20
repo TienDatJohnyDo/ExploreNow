@@ -1,13 +1,21 @@
 import React from 'react'; 
 import './App.css';
 import logoImage from './logo.png'
-
+import {BrowserRouter as Router, Route, Routes}from "react-router-dom";
+import {Home, Login} from "./Components"; 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         {/* Centered rectangle container */}
+        {/* Looking at routes  */}
+        <Router>
+          <Route>
+            <Route path = "/" element={<App />}/>
+            <Route path = "/Login" element={<Login />}/>
+          </Route>
+        </Router>
         <div className="centered-rectangle">
           <img src={logoImage} className="App-logo" alt="logo" />
           <p> Travel. Explore. Make Memories </p>
