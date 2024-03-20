@@ -7,12 +7,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,17 +16,88 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+ 
+}
+.App-logo{
+  margin : 20px auto 0; 
+  display : block; 
+  width: 300px; 
+  height :250px; 
 }
 
-.App-link {
-  color: #61dafb;
+/* Styles for the centered square */
+.centered-rectangle {
+  width: 400px; /* iPhone 15 width in pixels */
+  height: 970px; /* iPhone 15 height in pixels */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color:#282c34; 
+  z-index: 1;
+}
+.centered-rectangle p {
+  font-family: 'Playfair Display', serif; /* Set Playfair Display as the font family */
+  z-index: 2; /* Set a higher z-index to bring it above other elements */
+  font-size: 16px; /* Adjust the font size as needed */
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.blue-centered-rectangle{
+  font-family: 'Playfair Display', serif; /* Set Playfair Display as the font family */
+  width: 400px;
+  height: 60vh; /* 60% of the viewport height */
+  background-color: #1d4061; /* Blue color */
+  padding: 20px;
+  
+  border-bottom-left-radius: 10px; /* Adjust the value for bottom-left corner */
+  border-bottom-right-radius: 10px; /* Adjust the value for bottom-right corner */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 1; /* Adjusted z-index to bring it above other content */
+  font-size:18px;
+
+}
+.blue-centered-rectangle h1{
+  font-family: 'Sensation', serif; /* Set Playfair Display as the font family */ 
+  color : #6DDDE4;
+  font-weight: bold;
+}
+.blue-centered-rectangle p+p{
+  font-family: 'Playfair Display', serif; /* Set Playfair Display as the font family */
+  margin-top : 80px; 
+}
+
+.blue-centered-rectangle a {
+  font-family: 'Playfair Display', serif; /* Set Playfair Display as the font family */
+  color: #ffffff; /* Set the desired font color (white) for links */
+  text-decoration: underline; /* Underline the links */
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 60px; /* Increased space between the buttons */
+  margin-top: 20px; /* Adjusted margin for additional spacing */
+  
+}
+
+.button-container button {
+  font-family: 'Sansation', sans-serif;
+  font-size: 14px;
+  width: 100px; /* Set the desired width */
+  height: 40px; /* Set the desired height */
+  padding: 10px;
+  background-color: #ffffff; /* Button background color */
+  color: black; /* Button text color */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
 }
