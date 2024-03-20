@@ -14,7 +14,7 @@ function App() {
     
         <div className="centered-rectangle">
           <img src={logoImage} className="App-logo" alt="logo" />
-          <p> Travel. Explore. Make Memories </p>
+          <p> Travel. Explore Hello. Make Memories </p>
         </div>
         <div className = "blue-centered-rectangle">
           <h1> Welcome!</h1>
