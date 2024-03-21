@@ -11,15 +11,7 @@ function Profile() {
   return (
     <div className="discover-container">
       <h1 className="discover-label">Profile </h1>
-      
-      <div className="text-input-container">
-        <input 
-          type="text"
-          placeholder="Places, hotels, restaurants..."
-          className="text-input"
-        />
-        <FontAwesomeIcon icon={faSearch} color="grey" size="lg" style={{ marginLeft: '-30px', zIndex: '1' }} />
-      </div>
+    
       
       <div className="navigation-bar">
         <Link to ="/discover" className="nav-button">

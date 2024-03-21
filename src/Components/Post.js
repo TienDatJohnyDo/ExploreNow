@@ -1,5 +1,5 @@
 import React from 'react';
-import './search.css';
+import './post.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faUser, faSearch, faHome, } from '@fortawesome/free-solid-svg-icons';
 import { Routes, Route, Link } from 'react-router-dom';
@@ -11,11 +11,17 @@ function Post() {
   return (
     <div className="discover-container">
       <h1 className="discover-label">POST </h1>
+
+      <h2> Hi [Name] </h2> 
+      <br></br>
+      <h2> Share Your Journey</h2>
+      <h3> Where did you go? </h3>
       
       <div className="text-input-container">
+        
         <input 
           type="text"
-          placeholder="Places, hotels, restaurants..."
+          placeholder="Add Location"
           className="text-input"
         />
         <FontAwesomeIcon icon={faSearch} color="grey" size="lg" style={{ marginLeft: '-30px', zIndex: '1' }} />
