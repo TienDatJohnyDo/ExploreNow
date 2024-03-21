@@ -16,6 +16,8 @@
     align-items: center;
     font-family: 'Playfair Display', serif; /* Set Playfair Display as the font-family */
     color: #1d4061; /* Change the font color */
+    
+
   }
   
   /* Styles for the text input */
@@ -69,3 +71,7 @@
     left: 20px;
     cursor: pointer; /* Make it look clickable */
   }
+  .login-label {
+    text-align: left;
+    
+}

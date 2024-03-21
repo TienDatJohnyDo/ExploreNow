@@ -29,9 +29,13 @@ function SignUp() {
     setPasswordsMatch(newConfirmPassword === password);
   };
 
+  const goBack = () => {
+    window.location.href = '/'; // Navigate to the home page
+  };
+
   return (
     <div className="login-container">
-      <FontAwesomeIcon icon={faArrowLeft} className="back-arrow" />
+      <FontAwesomeIcon icon={faArrowLeft} className="back-arrow" onClick={goBack} />
       <h1>Sign Up</h1>
       <br />
       {/* Your login form */}
@@ -94,7 +98,7 @@ function SignUp() {
       <div className="button-container"> 
         <button disabled={!passwordsMatch}>Sign up</button>
       </div>
-      <p style={{ color: 'black' }}>Already have an account? <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Login</a></p>
+      <p style={{ color: 'black' }}>Already have an account? <a href="/login">Login</a></p>
     </div>
   );
 }
