@@ -6,6 +6,8 @@ import Login from "./Components/Login";
 import Signup from "./Components/Signup"; 
 import Discover from "./Components/Discover"; 
 import SearchPage from './Components/SearchPage';
+import Post from './Components/Post'; 
+import Profile from './Components/Profile'; 
 
 function App() {
   return (
@@ -60,6 +62,8 @@ function App() {
         <Route path = "/signup" element = {<Signup/>}/>
         <Route path = "/discover" element = {<Discover />}/>
         <Route path = "/searchPage" element = {<SearchPage />} />
+        <Route path = "post" element = {<Post />} />
+        <Route path = "profile" element = {<Profile />} />
         {/* Define routes for other components as needed */}
       </Routes>
     </Router>

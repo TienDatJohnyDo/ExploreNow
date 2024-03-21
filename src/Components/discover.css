@@ -28,13 +28,13 @@
 
 .navigation-bar {
     margin-top: 961px; /* Pushes the navigation bar to the bottom */
-    display: flex;
+    display: center;
     justify-content: space-around;
-    width: 110%;
+    width: 100%;
     background-color: #1d4061; /* Change the background color */
     padding: 20px 0; /* Add padding for better appearance */
     border-radius: 0 0 20px 20px; /* Add border radius to match the container */
-    height: 70px; /* Set the height of the navigation bar */
+    height: 50px; /* Set the height of the navigation bar */
 }
 
 .navigation-bar a {

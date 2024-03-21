@@ -30,14 +30,14 @@
     position: fixed; /* Ensure the navigation bar stays fixed at the bottom */
     bottom: 0; /* Position the navigation bar at the bottom of the container */
     left: 0; /* Align the navigation bar to the left edge of the container */
-    width: 100%; /* Make the navigation bar span the entire width of the container */
+    width: 300px; /* Make the navigation bar span the entire width of the container */
     background-color: #1d4061; /* Background color */
     padding: 20px 0; /* Padding */
     border-radius: 0px 0px 20px 20px; /* Border radius to match the container */
     display: flex; /* Use flexbox to align items */
     justify-content: space-around; /* Center items horizontally */
     align-items: center; /* Center items vertically */
-    height: 35px; /* Height of the navigation bar */
+    height: 10px; /* Height of the navigation bar */
 }
 
 .navigation-bar a {
@@ -57,7 +57,7 @@
     /* New styles for the text input */
     margin-top: 0px; /* Adjust the top margin to move the input field down */
     width: 350px; /* Adjust the width as needed */
-    height: 50px; /* Adjust the height as needed */
+    height: px; /* Adjust the height as needed */
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
