@@ -5,9 +5,11 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 function SignUp() {
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [isValidLength, setIsValidLength] = useState(false);
   const [hasUppercase, setHasUppercase] = useState(false);
   const [hasSpecialChar, setHasSpecialChar] = useState(false);
+  const [passwordsMatch, setPasswordsMatch] = useState(false);
 
   const handleChange = (e) => {
     const newPassword = e.target.value;
@@ -15,8 +17,16 @@ function SignUp() {
     // Update validation criteria
     setIsValidLength(newPassword.length >= 8);
     setHasUppercase(/[A-Z]/.test(newPassword));
-    setHasSpecialChar(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(newPassword));
-    
+    setHasSpecialChar(/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(newPassword));
+    // Check if passwords match
+    setPasswordsMatch(newPassword === confirmPassword);
+  };
+
+  const handleConfirmPasswordChange = (e) => {
+    const newConfirmPassword = e.target.value;
+    setConfirmPassword(newConfirmPassword);
+    // Check if passwords match
+    setPasswordsMatch(newConfirmPassword === password);
   };
 
   return (
@@ -50,10 +60,14 @@ function SignUp() {
       </div>
       <br />
       <input 
-        type="text" 
+        type="password" 
         placeholder="Confirm Password" 
         className="text-input password-input" 
+        value={confirmPassword} 
+        onChange={handleConfirmPasswordChange} 
       />
+      {/* Display password match status */}
+      {confirmPassword && !passwordsMatch && <p>Passwords do not match</p>}
       <p className="dob-label">Date of Birth:</p>
       <div className="dob-container">
         <input 
@@ -78,7 +92,7 @@ function SignUp() {
         />
       </div>
       <div className="button-container"> 
-        <button>Sign up</button>
+        <button disabled={!passwordsMatch}>Sign up</button>
       </div>
       <p style={{ color: 'black' }}>Already have an account? <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Login</a></p>
     </div>
