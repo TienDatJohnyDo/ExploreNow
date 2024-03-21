@@ -1,51 +1,38 @@
+// Discover.js
+
 import React from 'react';
 import './discover.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faUser, faSearch, faHome, faBell } from '@fortawesome/free-solid-svg-icons'; // Import the plus, user, search, home, and bell icons
-import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; 
-import Search from "./Components/Search"; 
+import { faPlus, faUser, faSearch, faHome, faBell } from '@fortawesome/free-solid-svg-icons';
+import { Routes, Route, Link } from 'react-router-dom'; // Importing Routes and Route instead of BrowserRouter as Router
+import SearchPage from "./SearchPage"; // Import the Search component
 
 function Discover() {
   return (
-    <Router>
-        <div className="discover-container">
-            <h1 className="discover-label">Discover</h1>
-            {/* Add content for Discover page here */}
-            <FontAwesomeIcon icon={faBell} className="notification-icon" />
-                <div className="navigation-bar">
-                    {/* Replace "Discover" link with white house icon */}
-                    <button className="nav-button active">
-                    <FontAwesomeIcon icon={faHome} color="#6DDDE4" size="lg" />
-                    </button>
-                    {/* Route the "Search" button to the search page */}
-                    
-                    <button className="nav-button">
-                        <FontAwesomeIcon icon={faSearch} color="white" size="lg" style={{ fontWeight: 'bold' }} />
-                    </button>
-                    
-                    {/* Replace "Post" link with plus button icon */}
-                    <button className="nav-button">
-                    <FontAwesomeIcon icon={faPlus} color="white" size="lg" style={{ fontWeight: 'bold' }} />
-                    </button>
-                    {/* Replace "Profile" link with the user icon */}
-                    <button className="nav-button">
-                    <FontAwesomeIcon icon={faUser} color="white" size="lg" />
-                    </button>
-                </div>
-        </div>
+    <div className="discover-container">
+      <h1 className="discover-label">Discover</h1>
+      <FontAwesomeIcon icon={faBell} className="notification-icon" />
+      <div className="navigation-bar">
+        <button className="nav-button">
+          <FontAwesomeIcon icon={faHome} color="#6DDDE4" size="lg" />
+        </button>
+        <Link to="/searchpage" className="nav-button"> {/* Link to the Search page */}
+          <FontAwesomeIcon icon={faSearch} color="white" size="lg" style={{ fontWeight: 'bold' }} />
+        </Link>
+        <button className="nav-button">
+          <FontAwesomeIcon icon={faPlus} color="white" size="lg" style={{ fontWeight: 'bold' }} />
+        </button>
+        <button className="nav-button">
+          <FontAwesomeIcon icon={faUser} color="white" size="lg" />
+        </button>
+      </div>
 
-
-        {/* Routes */}
-        <Routes >
-            <Route path ="/search" element = {<Search />} />
-
-            
-        </Routes>
-
-
-    </Router>
+      {/* Routes */}
+      <Routes>
+        <Route path="/searchpage" element={<SearchPage />} /> {/* Route for the Search component */}
+      </Routes>
+    </div>
   );
-  
 }
 
 export default Discover;
