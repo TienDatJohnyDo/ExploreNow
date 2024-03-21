@@ -35,11 +35,11 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   color:#282c34; 
-  z-index: 1;
+  /* z-index: 1; */
 }
 .centered-rectangle p {
   font-family: 'Playfair Display', serif; /* Set Playfair Display as the font family */
-  z-index: 2; /* Set a higher z-index to bring it above other elements */
+  /*z-index: 2; /* Set a higher z-index to bring it above other elements */
   font-size: 16px; /* Adjust the font size as needed */
   font-weight: bold;
 }
@@ -60,7 +60,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%); /* Center horizontally */
-  z-index: 1; /* Adjusted z-index to bring it above other content */
+  /*z-index: 1; /* Adjusted z-index to bring it above other content */
   font-size:18px;
 
 }
