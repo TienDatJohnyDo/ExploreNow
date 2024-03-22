@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './signup.css';
+import './styles/signup.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 

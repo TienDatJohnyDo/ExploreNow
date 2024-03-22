@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import './login.css';
+import './styles/login.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import {BrowserRouter as Link} from 'react-router-dom';
+
 
 function Login() {
     const [password, setPassword] = useState('');
@@ -38,7 +40,9 @@ function Login() {
                 onChange={handleChange} 
             />
             <div className="button-container"> 
-                <button>Login</button>
+                <Link to ="/discover">
+                    <button>Login</button>
+                </Link>
             </div>
             <p style={{ color: 'black' }}>Don't have an account? <a href="/signup">Sign Up</a></p>
         </div>
