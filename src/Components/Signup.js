@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './signup.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import {Routes, Route, Link } from 'react-router-dom';
+import Discover from './Discover';
+
 
 function SignUp() {
   const [password, setPassword] = useState('');
@@ -96,9 +99,20 @@ function SignUp() {
         />
       </div>
       <div className="button-container"> 
-        <button disabled={!passwordsMatch}>Sign up</button>
+        <Link to = "/discover">
+            <button>Sign up</button>
+        </Link>
       </div>
       <p style={{ color: 'black' }}>Already have an account? <a href="/login">Login</a></p>
+      
+      
+            <Routes>
+                <Route path="/discover" element={<Discover />} /> {/* Route for the Search component */}
+                
+            </Routes>
+    
+    
+    
     </div>
   );
 }

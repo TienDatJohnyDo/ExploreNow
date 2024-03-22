@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './login.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { Routes, Route, Link } from 'react-router-dom';
+import Discover from './Discover';
 
 function Login() {
     const [password, setPassword] = useState('');
@@ -38,9 +40,20 @@ function Login() {
                 onChange={handleChange} 
             />
             <div className="button-container"> 
+            <Link to = "/discover">
                 <button>Login</button>
+            </Link>
             </div>
+            
             <p style={{ color: 'black' }}>Don't have an account? <a href="/signup">Sign Up</a></p>
+        
+
+                {/* Routes */}
+            <Routes>
+                <Route path="/discover" element={<Discover />} /> {/* Route for the Search component */}
+                
+            </Routes>
+        
         </div>
     );
 }

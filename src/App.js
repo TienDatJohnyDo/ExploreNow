@@ -8,6 +8,8 @@ import Discover from "./Components/Discover";
 import SearchPage from './Components/SearchPage';
 import Post from './Components/Post'; 
 import Profile from './Components/Profile'; 
+import GuestDiscover from './Components/GuestDiscover'; 
+import Guestsearch from './Components/Guestsearch';
 
 function App() {
   return (
@@ -48,7 +50,7 @@ function App() {
             </div>
             <p> Or</p>
             <div className="button-container">
-              <Link to ="/discover">
+              <Link to ="/GuestDiscover">
               <button>Guest User</button>
               </Link>
             </div>
@@ -62,8 +64,10 @@ function App() {
         <Route path = "/signup" element = {<Signup/>}/>
         <Route path = "/discover" element = {<Discover />}/>
         <Route path = "/searchPage" element = {<SearchPage />} />
-        <Route path = "post" element = {<Post />} />
-        <Route path = "profile" element = {<Profile />} />
+        <Route path = "/post" element = {<Post />} />
+        <Route path = "/profile" element = {<Profile />} />
+        <Route path = "/GuestDiscover" element = {<GuestDiscover />} />
+        <Route path = "/GuestSearchPage " element = {<Guestsearch/>}/>
         {/* Define routes for other components as needed */}
       </Routes>
     </Router>
