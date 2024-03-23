@@ -7,7 +7,7 @@
 }
 
 .navigation-bar {
-    margin-top: 961px; /* Pushes the navigation bar to the bottom */
+    /* margin-top: 961px; /* Pushes the navigation bar to the bottom */
     margin-bottom: 10px; /* Pushes the navigation bar to the bottom */
     display: flex;
     align-items: center;
@@ -19,6 +19,7 @@
     height: 50px; /* Set the height of the navigation bar */
     position: fixed;
     z-index: 100;
+    bottom: 0;
 }
 
 .navigation-bar a {

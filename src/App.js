@@ -1,6 +1,6 @@
 import React from 'react'; 
 import './App.css';
-import {BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
+import {Routes, Route, useLocation} from 'react-router-dom';
 import Login from "./Components/Login"; 
 import Signup from "./Components/Signup"; 
 import Discover from "./Components/Discover"; 
@@ -17,11 +17,11 @@ function App() {
   const isNotLoginOrSignupPage = location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/";
 
   return (
-    <Router>
-      <EntryPage />
+    <div className='main'>
       {isNotLoginOrSignupPage && <NavigationBar />}
       
       <Routes>
+        <Route path = "/" element = {<EntryPage/>}/>
         <Route path="/login" element={<Login />} /> {/* Define the route for Login component */}
         <Route path = "/signup" element = {<Signup/>}/>
         <Route path = "/discover" element = {<Discover />}/>
@@ -29,7 +29,7 @@ function App() {
         <Route path = "/post" element = {<Post />} />
         <Route path = "/profile" element = {<Profile />} />
       </Routes>
-    </Router>
+    </div>
   );
 }
 

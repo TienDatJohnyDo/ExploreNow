@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/entryPage.css';
 import logoImage from '../appLogo.png'
-import {BrowserRouter as Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function EntryPage() {
   return (
