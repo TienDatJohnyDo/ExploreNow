@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './styles/login.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import {Link} from 'react-router-dom';
+import {Routes, Route, Link, useLocation} from 'react-router-dom';
+import Discover from './Discover';
 
 
 function Login() {
