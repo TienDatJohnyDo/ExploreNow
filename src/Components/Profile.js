@@ -33,6 +33,8 @@ function Profile() {
 
 
       {/* Add in at least 2 Post  */}
+      
+      
             
       <FontAwesomeIcon icon={faEllipsisV} className="more-icon" />
     </div>

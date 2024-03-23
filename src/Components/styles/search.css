@@ -1,20 +1,19 @@
 .discover-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    width: 400px;
-    height: 96vh;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Playfair Display', serif;
-    color: white;
+  position: fixed;
+  top: 100%; /* Adjust the top position to move the container closer to the top */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  color: white;
 }
 
 .discover-label {
@@ -94,7 +93,7 @@
 }
 .profile-stat .stat-number {
   /* font-weight: bold; */
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: 2px;
 }
 .profile-stat .stat-category{
