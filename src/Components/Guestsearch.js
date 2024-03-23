@@ -8,7 +8,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 function Guestsearch() {
   return (
     <div className="discover-container">
-      <h1 className="discover-label">Where to? Guest </h1>
+      <h1 className="discover-label">Where to? (guest) </h1>
       
       <div className="text-input-container">
         <input 

@@ -11,7 +11,7 @@ function GuestDiscover() {
   return (
     
     <div className="discover-container">
-      <h1 className="discover-label">Discover guest</h1>
+      <h1 className="discover-label">Discover (guest)</h1>
       <FontAwesomeIcon icon={faBell} className="notification-icon" />
     </div>
     
