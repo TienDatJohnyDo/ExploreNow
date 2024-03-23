@@ -25,3 +25,8 @@
     font-weight: bold;
     color: black; /* Change the color to ensure visibility */
 }
+
+.posts-container {
+    max-width: 400px;
+    height: 800px;
+}
