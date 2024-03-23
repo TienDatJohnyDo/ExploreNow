@@ -3,6 +3,7 @@ import './styles/entryPage.css';
 import logoImage from '../appLogo.png'
 import {Link} from 'react-router-dom';
 
+
 function EntryPage() {
   return (
     <div className="App">
@@ -38,7 +39,7 @@ function EntryPage() {
             </div>
             <p> Or</p>
             <div className="button-container">
-              <Link to ="/discover">
+              <Link to ="/GuestDiscover">
                 <button>Guest User</button>
               </Link>
             </div>

@@ -11,16 +11,17 @@ import GuestDiscover from './Components/GuestDiscover';
 import Guestsearch from './Components/Guestsearch';
 
 import NavigationBar from './Components/NavigationBar';
+import Guestnavigation from './Components/Guestnavigation';
 import EntryPage from './Components/EntryPage';
 
 function App() {
   
   const location = useLocation();
   const isNotLoginOrSignupPage = location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/";
-
+  const isGuestDiscoverPage = location.pathname === "/GuestDiscover";
   return (
     <div className='main'>
-      {isNotLoginOrSignupPage && <NavigationBar />}
+      {isNotLoginOrSignupPage && (isGuestDiscoverPage ? <Guestnavigation /> : <NavigationBar />)}
       
       <Routes>
         <Route path = "/" element = {<EntryPage/>}/>
@@ -31,7 +32,7 @@ function App() {
         <Route path = "/post" element = {<Post />} />
         <Route path = "/profile" element = {<Profile />} />
         <Route path = "/GuestDiscover" element = {<GuestDiscover />} />
-        <Route path = "/GuestSearchPage " element = {<Guestsearch/>}/>
+        <Route path = "/guestsearch" element = {<Guestsearch/>}/>
         {/* Define routes for other components as needed */}
 
       </Routes>

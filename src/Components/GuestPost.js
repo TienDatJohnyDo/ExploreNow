@@ -1,4 +1,4 @@
-// Guestaccess.js
+// GuestPost.js
 import React from 'react';
 import './styles/search.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,16 +7,16 @@ import { Link } from 'react-router-dom'; // Importing Routes and Route instead o
 
 
 
-function GuestDiscover() {
+function GuestPost() {
   return (
     
     <div className="discover-container">
-      <h1 className="discover-label">Discover guest</h1>
-      <FontAwesomeIcon icon={faBell} className="notification-icon" />
+      <h1 className="discover-label">Post guest</h1>
+      
     </div>
     
     
   );
 }
 
-export default GuestDiscover;
+export default GuestPost;
