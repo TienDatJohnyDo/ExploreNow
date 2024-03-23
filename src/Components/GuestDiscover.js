@@ -18,7 +18,7 @@ function GuestDiscover() {
         <Link to ="/GuestDiscover" className="nav-button">
           <FontAwesomeIcon icon={faHome} color="#6DDDE4" size="lg" />
         </Link>
-        <Link to = "/GuestSearchPage" className="nav-button"> {/* Link to the Search page */}
+        <Link to = "/GuestSearchPage" className="nav-button"> 
           <FontAwesomeIcon icon={faSearch} color="white" size="lg" style={{ fontWeight: 'bold' }} />
         </Link>
         <Link to ="/post" className="nav-button">
