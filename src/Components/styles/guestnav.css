@@ -1,0 +1,37 @@
+.main{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 400px;
+    margin: auto;
+}
+
+.navigation-bar {
+    /* margin-top: 961px; /* Pushes the navigation bar to the bottom */
+    margin-bottom: 10px; /* Pushes the navigation bar to the bottom */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 400px;
+    background-color: #1d4061; /* Change the background color */
+    padding: 10px 10px 10px 0; /* Add padding for better appearance */
+    border-radius: 20px 20px 20px 20px; /* Add border radius to match the container */
+    height: 50px; /* Set the height of the navigation bar */
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    color:white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
