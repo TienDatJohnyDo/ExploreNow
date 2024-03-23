@@ -1,6 +1,6 @@
 // Guestaccess.js
 import React from 'react';
-import './discover.css';
+import './styles/discover.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faUser, faSearch, faHome, faBell } from '@fortawesome/free-solid-svg-icons';
 import { Routes, Route, Link } from 'react-router-dom'; // Importing Routes and Route instead of BrowserRouter as Router
