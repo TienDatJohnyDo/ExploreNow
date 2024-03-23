@@ -1,0 +1,41 @@
+.discover-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 400px;
+    height: 96vh;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
+
+.discover-label {
+    position: absolute;
+    top: 10px; /* Adjust the top position to move the label down */
+    left: 30px; /* Adjust the left position to move the label right */
+    font-size: 30px;
+    font-weight: bold;
+    color: black; /* Change the color to ensure visibility */
+}
+
+.text-input {
+  /* New styles for the text input */
+  margin-top: 0px; /* Adjust the top margin to move the input field down */
+  width: 350px; /* Adjust the width as needed */
+  height: px; /* Adjust the height as needed */
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+
+
+  

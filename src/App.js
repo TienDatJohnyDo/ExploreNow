@@ -1,7 +1,6 @@
 import React from 'react'; 
 import './App.css';
-import logoImage from './logo.png'
-import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; 
+import {Routes, Route, useLocation} from 'react-router-dom';
 import Login from "./Components/Login"; 
 import Signup from "./Components/Signup"; 
 import Discover from "./Components/Discover"; 
@@ -11,55 +10,20 @@ import Profile from './Components/Profile';
 import GuestDiscover from './Components/GuestDiscover'; 
 import Guestsearch from './Components/Guestsearch';
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <header className="App-header">
-          {/* Centered rectangle container */}
-          {/* Looking at routes  */}
-          <div className="centered-rectangle">
-            <img src={logoImage} className="App-logo" alt="logo" />
-            <p> Travel. Explore Hello. Make Memories </p>
-          </div>
-          <div className="blue-centered-rectangle">
-            <h1> Welcome!</h1>
-            <p> Let's get Started!</p>
-            <p>
-              I agree to Explore Now's{' '}
-              <a href="/terms-of-service" target="_blank" rel="noopener noreferrer">
-                Term of Service <br />
-              </a>{' '}
-              and confirm that I have read Explore Now's{' '} <br />
-              <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
-                Privacy Policy
-              </a>
-              .
-              <br />
-              <br />
-            </p>
-            {/* Two Buttons for Login and New guest */}
-            <div className="button-container">
-              <Link to="/login"> {/* Use "to" prop to specify the path */}
-                <button>Login</button>
-              </Link>
-              {/* Assuming you have a route for "New Guest" as well */}
-              <Link to="/signup"> {/* You need to define this route */}
-                <button>I'm New</button>
-              </Link>
-            </div>
-            <p> Or</p>
-            <div className="button-container">
-              <Link to ="/GuestDiscover">
-              <button>Guest User</button>
-              </Link>
-            </div>
-          </div>
-        </header>
-      </div>
+import NavigationBar from './Components/NavigationBar';
+import EntryPage from './Components/EntryPage';
 
-      {/* Define your routes */}
+function App() {
+  
+  const location = useLocation();
+  const isNotLoginOrSignupPage = location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/";
+
+  return (
+    <div className='main'>
+      {isNotLoginOrSignupPage && <NavigationBar />}
+      
       <Routes>
+        <Route path = "/" element = {<EntryPage/>}/>
         <Route path="/login" element={<Login />} /> {/* Define the route for Login component */}
         <Route path = "/signup" element = {<Signup/>}/>
         <Route path = "/discover" element = {<Discover />}/>
@@ -69,8 +33,9 @@ function App() {
         <Route path = "/GuestDiscover" element = {<GuestDiscover />} />
         <Route path = "/GuestSearchPage " element = {<Guestsearch/>}/>
         {/* Define routes for other components as needed */}
+
       </Routes>
-    </Router>
+    </div>
   );
 }
 
