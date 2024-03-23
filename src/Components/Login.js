@@ -44,7 +44,16 @@ function Login() {
                     <button>Login</button>
                 </Link>
             </div>
+            
             <p style={{ color: 'black' }}>Don't have an account? <a href="/signup">Sign Up</a></p>
+        
+
+                {/* Routes */}
+            <Routes>
+                <Route path="/discover" element={<Discover />} /> {/* Route for the Search component */}
+                
+            </Routes>
+        
         </div>
     );
 }

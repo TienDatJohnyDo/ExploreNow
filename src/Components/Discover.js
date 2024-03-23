@@ -1,5 +1,4 @@
 // Discover.js
-
 import React from 'react';
 import './styles/discover.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
