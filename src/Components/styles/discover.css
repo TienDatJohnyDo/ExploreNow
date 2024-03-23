@@ -30,3 +30,7 @@
     max-width: 400px;
     height: 800px;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
