@@ -9,6 +9,7 @@ function Profile() {
     <div className="discover-container">
       <div className="profile-info">
         <div className="profile-picture-container">
+        <FontAwesomeIcon icon={faEllipsisV} className="more-icon" />
           <img src={lauren} alt="Profile" className="profile-picture" />
         </div>
         <div className="profile-text">
@@ -32,11 +33,11 @@ function Profile() {
       </div>
 
 
-      {/* Add in at least 2 Post  */}
-      
+      {/* Add in at least 2 Post */}
+      <br></br>
       
             
-      <FontAwesomeIcon icon={faEllipsisV} className="more-icon" />
+      
     </div>
   );
 }
