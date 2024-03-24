@@ -17,7 +17,8 @@ function SearchPage() {
         />
         <FontAwesomeIcon icon={faSearch} color="grey" size="lg" style={{ marginLeft: '-30px', zIndex: '1' }} />
       </div>
-      
+      <h1 className="Suggestions">Suggestions </h1>
+      <h1 className="Category 1">Category 1 </h1>
 
     </div>
   );
