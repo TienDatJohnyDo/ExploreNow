@@ -7,6 +7,7 @@ import Postcard from './ProfilePosts';
 import laurenPic from './images/lauren.jpg'
 import jasper from './images/jasper.jpg'
 import banff from './images/banff.jpg'
+import lakeLouise from './images/lakeLouise.jpg'
 
 
 const MyComponent = () => {
@@ -32,7 +33,7 @@ const MyComponent = () => {
   const post3 = {
     profilePic: laurenPic,
     username: "User 3",
-    image: banff,
+    image: lakeLouise,
     location: "Lake Louise",
     heartCount: "2.2 k",
     commentCount: 500,
