@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/entryPage.css';
-import logoImage from '../appLogo.png'
+import logoImage from './images/appLogo.png'
 import {Link} from 'react-router-dom';
 
 

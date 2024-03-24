@@ -1,20 +1,19 @@
 .discover-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    width: 400px;
-    height: 96vh;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Playfair Display', serif;
-    color: white;
+  position: fixed;
+  top: 0; /* Adjust the top position to move the container closer to the top */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  color: white;
 }
 
 .discover-label {
@@ -41,29 +40,47 @@
   right: 20px; /* Adjust the right distance as needed */
   cursor: pointer;
   font-size : 24px;
+  color: black;
 }
 
 .profile-info {
   display: flex;
   align-items: center;
+  color: black;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 .profile-picture-container {
-  width: 100px; /* Adjust the width of the profile picture container */
-  height: 100px; /* Adjust the height of the profile picture container */
-  border-radius: 50%; /* Make the container circular */
-  overflow: hidden; /* Hide overflow content */
-  border :2px solid black; 
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  overflow: hidden;
+  margin-right: 30px;
 }
 
-.profile-picture {
-  width: 95%; /* Make the profile picture fill its container */
-  height: auto; /* Maintain aspect ratio */
+.profile-picture-container .profile-picture {
+  height: 100px;
+  object-fit: cover;
+  position: relative;
+  width: 100px;
+  border-radius: 50%;
 }
 
 .profile-text {
-  margin-left: 20px; /* Add space between profile picture and text */
+  margin-left: 0px;
 }
+
+.profile-text h2 {
+  font-family: "Sansation-Bold", sans-serif;
+  letter-spacing: 1.6px;
+}
+
+.profile-text p {
+  font-family: "Sansation-Bold", sans-serif;
+  letter-spacing: 1.0px;
+}
+
 .profile-info {
   display: flex;
   align-items: center;
@@ -73,12 +90,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #D2F6FE; /* Blue background color */
-  padding: 10px; /* Add padding for better appearance */
-  border-radius: 5px; /* Add border radius for rounded corners */
-  width: 380px; /* Set the width of the container */
-  height: 70px; /* Set the height of the container */
-
+  background-color: #D2F6FE; 
+  padding: 10px; 
+  border-radius: 10px; 
+  width: 380px;
+  height: 70px; 
+  color: black;
 }
 .profile-stat .stat-number,
 .profile-stat .stat-category {
@@ -86,18 +103,22 @@
 }
 
 .profile-stat {
-  margin-right: 80px; /* Add spacing between the stat items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 70px; /* Add spacing between the stat items */
 }
 .profile-stat .stat-number {
   /* font-weight: bold; */
-  font-size: 32px;
-  margin-bottom: 5px;
+  font-size: 26px;
+  margin-bottom: 2px;
 }
 .profile-stat .stat-category{
   font-size: 20px;
-  margin-top:5px;
+  margin-top:2px;
 }
 
 .profile-stat:last-child {
-  margin-right: 0; /* Remove margin from the last stat item to prevent extra spacing */
+  margin-right: 0;
 }

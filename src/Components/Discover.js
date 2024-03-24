@@ -7,8 +7,8 @@ import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 import Postcard from './Postcard';
 
-import laurenPic from '../profilePic1.jpg'
-import postImage from '../jasper.jpg'
+import laurenPic from './images/lauren.jpg'
+import postImage from './images/jasper.jpg'
 
 const MyComponent = () => {
   // Define your components' array
@@ -16,60 +16,45 @@ const MyComponent = () => {
   //   .fill(null)
   //   .map((_, index) => <Grid item><Postcard key={index} /></Grid>);
 
-  const user1 = {
+  const post1 = {
     profilePic: laurenPic,
     username: "Lauren",
-  };
-
-  const post1 = {
     image: postImage,
     location: "Banff",
     heartCount: "1.2 k",
     commentCount: 600,
-  };
-
-  const user2 = {
-    profilePic: laurenPic,
-    username: "User 2",
   };
 
   const post2 = {
+    profilePic: laurenPic,
+    username: "User 2",
     image: postImage,
     location: "Banff",
     heartCount: "1.2 k",
     commentCount: 600,
-  };
-
-  const user3 = {
-    profilePic: laurenPic,
-    username: "User 3",
   };
 
   const post3 = {
+    profilePic: laurenPic,
+    username: "User 3",
     image: postImage,
     location: "Banff",
     heartCount: "1.2 k",
     commentCount: 600,
-  };
-
-  const user4 = {
-    profilePic: laurenPic,
-    username: "User 4",
   };
 
   const post4 = {
+    profilePic: laurenPic,
+    username: "User 4",
     image: postImage,
     location: "Banff",
     heartCount: "1.2 k",
     commentCount: 600,
   };
 
-  const user5 = {
+  const post5 = {
     profilePic: laurenPic,
     username: "User 5",
-  };
-
-  const post5 = {
     image: postImage,
     location: "Banff",
     heartCount: "1.2 k",
@@ -85,11 +70,11 @@ const MyComponent = () => {
           style={{ maxHeight: '750px',
                    overflow: 'auto'}}>
 
-      <Grid item><Postcard key={1} user={user1} post={post1} /></Grid>
-      <Grid item><Postcard key={2} user={user2} post={post2} /></Grid>
-      <Grid item><Postcard key={3} user={user3} post={post3} /></Grid>
-      <Grid item><Postcard key={4} user={user4} post={post4} /></Grid>
-      <Grid item><Postcard key={5} user={user5} post={post5} /></Grid>
+      <Grid item><Postcard key={1} post={post1} /></Grid>
+      <Grid item><Postcard key={2} post={post2} /></Grid>
+      <Grid item><Postcard key={3} post={post3} /></Grid>
+      <Grid item><Postcard key={4} post={post4} /></Grid>
+      <Grid item><Postcard key={5} post={post5} /></Grid>
       {/* {components} */}
     </Grid>
   );

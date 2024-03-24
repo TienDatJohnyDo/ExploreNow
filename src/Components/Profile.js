@@ -1,16 +1,70 @@
 import React from 'react';
-import './styles/search.css';
+import { Grid } from '@mui/material';
+import './styles/profile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'; // Importing the "more" icon
-import lauren from '../lauren.jpeg'
+import Postcard from './ProfilePosts';
+import laurenPic from './images/lauren.jpg'
+import jasper from './images/jasper.jpg'
+import banff from './images/banff.jpg'
+
+
+const MyComponent = () => {
+
+  const post1 = {
+    profilePic: laurenPic,
+    username: "Lauren",
+    image: jasper,
+    location: "Banff",
+    heartCount: "1.2 k",
+    commentCount: 400,
+  };
+
+  const post2 = {
+    profilePic: laurenPic,
+    username: "User 2",
+    image: banff,
+    location: "Jasper",
+    heartCount: "1.5 k",
+    commentCount: 300,
+  };
+
+  const post3 = {
+    profilePic: laurenPic,
+    username: "User 3",
+    image: banff,
+    location: "Lake Louise",
+    heartCount: "2.2 k",
+    commentCount: 500,
+  };
+
+  return (
+    <Grid container justify="center" 
+          margin='auto'
+          rowSpacing={7}
+          direction="row"
+          paddingBlockEnd="50px"
+          marginBlockStart="10px"
+          style={{ maxHeight: '500px',
+                   overflow: 'auto'}}>
+
+      <Grid item><Postcard key={1} post={post1} /></Grid>
+      <Grid item><Postcard key={2} post={post2} /></Grid>
+      <Grid item><Postcard key={3} post={post3} /></Grid>
+    </Grid>
+  );
+};
+
+
 
 function Profile() {
   return (
     <div className="discover-container">
+      <FontAwesomeIcon icon={faEllipsisV} className="more-icon" />
       <div className="profile-info">
         <div className="profile-picture-container">
-        <FontAwesomeIcon icon={faEllipsisV} className="more-icon" />
-          <img src={lauren} alt="Profile" className="profile-picture" />
+          <img className="profile-picture" alt="profilePic" src={laurenPic} />
+
         </div>
         <div className="profile-text">
           <h2>Lauren Cromwell</h2>
@@ -19,7 +73,7 @@ function Profile() {
       </div>
       <div className="profile-stats-container">
         <div className="profile-stat">
-          <p className="stat-number">2</p>
+          <p className="stat-number">3</p>
           <p className="stat-category">Posts</p>
         </div>
         <div className="profile-stat">
@@ -32,11 +86,12 @@ function Profile() {
         </div>
       </div>
 
-
       {/* Add in at least 2 Post */}
+      <div className='posts-container'>
+        <MyComponent />
+      </div>
+
       <br></br>
-      
-            
       
     </div>
   );

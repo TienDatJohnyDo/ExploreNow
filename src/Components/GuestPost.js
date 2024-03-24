@@ -4,7 +4,7 @@ import './styles/post.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faUser, faSearch, faHome, faBell } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom'; // Importing Routes and Route instead of BrowserRouter as Router
-import PleaseImage from '../Please_login.png'
+import PleaseImage from './images/Please_login.png'
 
 
 function GuestPost() {
