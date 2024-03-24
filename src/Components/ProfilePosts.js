@@ -5,21 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
 <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} />
 
-// UserProfile component
-export const UserProfile = ({ post }) => {
-  return (
-    <div className="profile-box" onClick={() => console.log("User clicked")}>
-      <div className="user">
-        <div className="overlap-group">
-          <div className="rectangle" />
-          <img className="ellipse" alt="Ellipse" src={post.profilePic} />
-          <div className="text-wrapper">{post.username}</div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 // Image component
 const ImageBox = ({ post }) => {
   return (
@@ -58,9 +43,6 @@ const Postcard = ({post}) => {
   
     return (
         <div className="postcard">
-            <div className="user-overlay" style={{zIndex: 10}}>
-                <UserProfile post={post}/>
-            </div>
             <div className="img-bar" style={{zIndex: 5}}>
                 <ImageBox post={post} />
             </div>
