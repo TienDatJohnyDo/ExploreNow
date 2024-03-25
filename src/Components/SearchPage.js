@@ -5,7 +5,7 @@ import { faSearch, faBell } from '@fortawesome/free-solid-svg-icons';
 
 import { Grid } from '@mui/material';
 import SearchCard from './SearchCard';
-import postImage from '../jasper.jpg';
+import postImage from './images/jasper.jpg';
 
 
 function SearchPage() {
