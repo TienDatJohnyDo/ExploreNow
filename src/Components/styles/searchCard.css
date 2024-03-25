@@ -1,0 +1,28 @@
+.square-card {
+    position: relative;
+    width: 180px; /* Adjust width as needed */
+    height: 180px; /* Card will be square */
+    overflow: hidden; /* Ensure the label is contained within the card */
+    border-radius: 12px; /* Rounded corners */
+    
+    /* Add any additional styling you desire for the card */
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire card */
+    border-radius: 12px; /* Rounded corners */
+  }
+  
+  .label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 8px; /* Adjust padding as needed */
+    /* background-color: rgba(0, 0, 0, 0.7); Semi-transparent background */
+    color: white;
+    font-size: 14px; /* Adjust font size as needed */
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom-left-radius: 12px; /* Match card's rounded corner */
+  }
