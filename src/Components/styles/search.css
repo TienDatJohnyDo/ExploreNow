@@ -1,122 +1,48 @@
-.discover-container {
+.search-container {
   position: fixed;
-  top: 0; /* Adjust the top position to move the container closer to the top */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  width: 400px;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-family: 'Playfair Display', serif;
-  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  height: 96vh;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
 }
 
-.discover-label {
-    position: absolute;
-    top: 10px; /* Adjust the top position to move the label down */
-    left: 30px; /* Adjust the left position to move the label right */
-    font-size: 30px;
-    font-weight: bold;
-    color: black; /* Change the color to ensure visibility */
+.search-header {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+.notification-bell {
+  position: absolute;
+  top: 37px;
+  right: 30px;
+  color: black;
+  font-size: 24px;
+}
+
+.search-body {
+  position: absolute;
+  display: flex;
+  top: 130px;
+  height: 800px;
+  width: 400px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.search-bar {
+  position: absolute;
+  width: 400px;
+  top: 80px;
 }
 
 .text-input {
-  /* New styles for the text input */
-  margin-top: 0px; /* Adjust the top margin to move the input field down */
-  width: 350px; /* Adjust the width as needed */
-  height: px; /* Adjust the height as needed */
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
+  width: 95%;
 }
-.more-icon {
-  position: absolute;
-  top: 35px; /* Adjust the top distance as needed */
-  right: 20px; /* Adjust the right distance as needed */
-  cursor: pointer;
-  font-size : 24px;
-}
-
-.profile-info {
-  display: flex;
-  align-items: center;
-  color: black;
-  margin-bottom: 20px;
-}
-
-.profile-picture-container {
-  width: 100px; 
-  height: 100px; 
-  border-radius: 50%; 
-  overflow: hidden; 
-  border :2px solid black; 
-  margin-right: 30px;
-}
-
-.profile-picture {
-  width: 95%; 
-  height: auto; 
-}
-
-.profile-text {
-  margin-left: 0px;
-}
-
-.profile-text h2 {
-  font-family: "Sansation-Bold", sans-serif;
-  letter-spacing: 1.6px;
-}
-
-.profile-text p {
-  font-family: "Sansation-Bold", sans-serif;
-  letter-spacing: 1.0px;
-}
-
-.profile-info {
-  display: flex;
-  align-items: center;
-}
-
-.profile-stats-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #D2F6FE; 
-  padding: 10px; 
-  border-radius: 10px; 
-  width: 380px;
-  height: 70px; 
-  color: black;
-}
-.profile-stat .stat-number,
-.profile-stat .stat-category {
-  font-family: 'Sen', sans-serif;
-}
-
-.profile-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-right: 70px; /* Add spacing between the stat items */
-}
-.profile-stat .stat-number {
-  /* font-weight: bold; */
-  font-size: 26px;
-  margin-bottom: 2px;
-}
-.profile-stat .stat-category{
-  font-size: 20px;
-  margin-top:2px;
-}
-
-.profile-stat:last-child {
-  margin-right: 0;
-}
-
-  
