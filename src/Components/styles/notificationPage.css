@@ -1,0 +1,324 @@
+.discover-container {
+}
+
+/* ==================================================================== */
+/*  Collab Request activity box */
+/* ==================================================================== */
+
+.box {
+    display: grid;
+    height: 70px;
+    width: 390px;
+    grid-template-columns: 60px 140px 100px 100px;
+    grid-template-rows: 70px;
+    grid-gap: 0px;
+    border: 3px solid #1D4061;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .column-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .column-2 {
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: -10px;
+  }
+  
+  .column-3 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  
+  .column-4 {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  
+  .rows-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row {
+    align-items: center;
+    height: 20px;
+    font-family: 'Sen', sans-serif;
+  }
+  
+  .row-1 {
+    grid-column: 2;
+    grid-row: 1;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  
+  .row-2 {
+    grid-column: 2;
+    grid-row: 2;
+    color: #717171;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  .profile-picture {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+  }
+  
+  .button {
+    height: 30px;
+    width: 80px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  
+  .button-1 {
+    border: 3px solid #960000;
+    background-color: white;
+    color: #960000;
+    grid-column: 3;
+    grid-row: 1;
+  }
+  
+  .button-2 {
+    background-color: #42BBFF;
+    border-color: #42BBFF;
+    color: white;
+    grid-column: 4;
+    grid-row: 1;
+    margin-right: 20px;
+  }
+
+
+  /* ==================================================================== */
+/*  Follow Request activity box */
+/* ==================================================================== */
+
+.Fbox {
+    display: grid;
+    height: 70px;
+    width: 390px;
+    grid-template-columns: 60px 140px 100px 100px;
+    grid-template-rows: 70px;
+    grid-gap: 0px;
+    border: 3px solid #1D4061;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .Fcolumn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Fcolumn-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .Fcolumn-2 {
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: -10px;
+  }
+  
+  .Fcolumn-3 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  
+  .Fcolumn-4 {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  
+  .Frows-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Frow {
+    align-items: center;
+    height: 20px;
+    font-family: 'Sen', sans-serif;
+  }
+  
+  .Frow-1 {
+    grid-column: 2;
+    grid-row: 1;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  
+  .Fprofile-picture {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+  }
+  
+  .Fbutton {
+    height: 30px;
+    width: 80px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  
+  .Fbutton-1 {
+    border: 3px solid #960000;
+    background-color: white;
+    color: #960000;
+    grid-column: 3;
+    grid-row: 1;
+  }
+  
+  .Fbutton-2 {
+    background-color: #42BBFF;
+    border-color: #42BBFF;
+    color: white;
+    grid-column: 4;
+    grid-row: 1;
+    margin-right: 20px;
+  }
+
+/* ==================================================================== */
+/*  Recenty activity box */
+/* ==================================================================== */
+
+  .RAbox {
+    display: grid;
+    height: 70px;
+    width: 390px;
+    grid-template-columns: 60px 330px;
+    grid-template-rows: 70px;
+    grid-gap: 0px;
+    border: 3px solid #1D4061;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .RAcolumn {
+    display: flex;
+    align-items: center;
+  }
+  
+  .RAcolumn-1 {
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: center;
+  }
+  
+  .RAcolumn-2 {
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 30px;
+  }
+  
+  .RArows-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .RArow {
+    align-items: center;
+    height: 20px;
+    font-family: 'Sen', sans-serif;
+  }
+  
+  .RArow-1 {
+    grid-column: 2;
+    grid-row: 1;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  
+  .RArow-2 {
+    grid-column: 2;
+    grid-row: 2;
+    color: #717171;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  .RAprofile-picture {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+  }
+  
+
+
+
+
+/* ==================================================================== */
+
+.collab-container {
+    width: 400px;
+}
+
+.collab-container .title {
+    color: black;
+    font-family: 'Sen', sans-serif;
+}
+
+.more {
+  width: 100px;
+  color: black;
+  margin-left: 320px;
+  font-family: 'Sen', sans-serif;
+  font-weight: bold;
+}
+
+.follow-container {
+    width: 400px;
+}
+
+.follow-container .title {
+    color: black;
+    font-family: 'Sen', sans-serif;
+}
+
+.FRmore {
+  color: black;
+}
+
+.recent-act-container {
+    width: 400px;
+    margin-bottom: 80px;
+}
+
+.recent-act-container .title {
+    color: black;
+    font-family: 'Sen', sans-serif;
+}

@@ -1,6 +1,7 @@
 // Discover.js
 import React from 'react';
 import { Grid } from '@mui/material';
+import {Link} from 'react-router-dom';
 import './styles/discover.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
@@ -84,7 +85,9 @@ function Discover() {
   return (
     <div className="discover-container">
       <h1 className="discover-label">Discover</h1>
-      <FontAwesomeIcon icon={faBell} className="notification-icon" />
+      <Link to="/notificationPage" className='noti-button'>
+        <FontAwesomeIcon icon={faBell} className="notification-icon" />
+      </Link>
       <div className='posts-container'>
         <MyComponent />
       </div>
