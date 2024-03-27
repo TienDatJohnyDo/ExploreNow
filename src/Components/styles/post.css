@@ -10,40 +10,81 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Playfair Display', serif;
     color: black;
-}
-
-.top-section {
-    background-color: blue;
-    border-radius: 20px 20px 0 0; /* Rounded corners only at the top */
-    padding: 20px;
-    text-align: center; /* Center align the content */
-}
-
-.discover-label {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: white; /* Set text color to white for better visibility */
-}
-
-.text-input-container {
-    position: relative; /* Position the search icon relative to the input */
-    margin-top: 20px; /* Add some margin to separate the input and icon */
-}
-
-.text-input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-}
-
-.notification-icon {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
+  }
+  
+  .location-text {
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    position: relative; /* Ensure relative positioning */
+    z-index: 2; /* Set a higher z-index to ensure it's displayed above other elements */
+  }
+  
+  .location-text p {
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
     color: black;
-    font-size: 24px;
-}
+  }
+
+  .next-button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .text-input-container {
+    margin-bottom: 30px; /* Add margin at the bottom */
+    align-items: center;
+  }
+  
+  .next-button {
+    font-family: 'Playfair Display', serif;
+    background-color: white; 
+    border: 2px solid black;
+    color:#1d4061;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    
+  }
+  .text-input-container {
+    display: flex; /* Use flexbox to center the select element */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  .text-input-container select {
+    width: 371px; /* Set the width of the dropdown menu */
+    height: 40px; /* Set the height of the dropdown menu */
+    padding: 10px; /* Add padding for spacing */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    border: 1px solid black; /* Add border for visual separation */
+    font-size: 16px; /* Adjust font size */
+    
+  }
+  .text-input-container {
+    position: relative; /* Ensure relative positioning */
+  }
+  
+  .text-input {
+    width: calc(100% - 40px); /* Adjust width to accommodate the icon */
+    padding: 10px; /* Add padding for spacing */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    border: 1px solid #ccc; /* Add border for visual separation */
+    font-size: 16px; /* Adjust font size */
+  }
+  
+  .search-icon {
+    position: absolute; /* Position the icon absolutely */
+    right: 10px; /* Adjust the right position as needed */
+    top: 30%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+  }
+  .collaborator-name {
+    color: black; /* Set text color to black */
+    padding: 70px;
+    font-weight: bold;
+  }

@@ -34,3 +34,12 @@
 ::-webkit-scrollbar {
     display: none;
 }
+.discover-container {
+    position: relative; /* Ensure relative positioning */
+  }
+  
+  .notification-icon {
+    position: absolute; /* Position the icon absolutely */
+    top: 40px; /* Adjust top position as needed */
+    right: 20px; /* Adjust right position as needed */
+  }

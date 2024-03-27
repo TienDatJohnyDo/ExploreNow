@@ -86,7 +86,7 @@ function Discover() {
     <div className="discover-container">
       <h1 className="discover-label">Discover</h1>
       <Link to="/notificationPage" className='noti-button'>
-        <FontAwesomeIcon icon={faBell} className="notification-icon" />
+        <FontAwesomeIcon icon={faBell} className="notification-icon" size='lg' />
       </Link>
       <div className='posts-container'>
         <MyComponent />
