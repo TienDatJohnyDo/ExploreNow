@@ -27,9 +27,9 @@ function PostThree() {
        <div className='discover-container'>
         <h1 className='discover-label'>POST</h1>
 
-        <div className="text-input-container">
+        <div className="desc-input-container">
             <textarea
-                className="text-input"
+                className="desc-input"
                 value={text}
                 onChange={handleChange}
                 placeholder="Type here..."
