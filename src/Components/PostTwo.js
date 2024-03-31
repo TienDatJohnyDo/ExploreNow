@@ -1,20 +1,16 @@
 import React, { useState } from 'react';
-import './styles/postTwo.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faUser, faMinus } from '@fortawesome/free-solid-svg-icons';
-
+import './styles/postTwo.css'; // Import your CSS file
+import postImage from './images/jasper.jpg'; // Import your image
 
 function PostTwo() {
+  const [selectedImages, setSelectedImages] = useState([]);
+  const MAX_IMAGES = 3;
 
-    const [selectedCollaborator, setSelectedCollaborator] = useState('');
-
-  const handleCollaboratorChange = (event) => {
-    setSelectedCollaborator(event.target.value);
+  const handleAddImage = () => {
+    if (selectedImages.length < MAX_IMAGES) {
+      setSelectedImages([...selectedImages, postImage]); // Update with spread syntax
+    }
   };
-
-  const handleCollaboratorRemove = () => {
-    setSelectedCollaborator("");
-  }
 
   return (
     <div className="discover-container">
@@ -24,6 +20,25 @@ function PostTwo() {
         <p>Add some photos</p>
       </div>
 
+      <div className="image-upload-container">
+        {selectedImages.map((imageUrl, index) => (
+          <div key={index} className="rounded-square">
+            {/* Add image element with object-fit */}
+            <img src={imageUrl} alt="Uploaded" width="125" height="125" style={{ borderRadius: '10%' }} />
+          </div>
+        ))}
+
+        {/* Empty squares for remaining slots */}
+        {Array(MAX_IMAGES - selectedImages.length).fill(null).map((_, index) => (
+          <div key={index + selectedImages.length} className="rounded-square"></div>
+        ))}
+      </div>
+
+      <div className="next-button-container">
+        <button className="next-button" onClick={handleAddImage}>
+          Add Photos
+        </button>
+      </div>
       <div className="next-button-container">
         <button className="next-button">Next</button>
       </div>

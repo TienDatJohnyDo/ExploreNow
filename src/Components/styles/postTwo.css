@@ -16,3 +16,38 @@
     position: fixed;
     top: 100px;
   }
+
+  .next-button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .next-button {
+    font-family: 'Playfair Display', serif;
+    background-color: white; 
+    border: 2px solid black;
+    color:#1d4061;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    
+  }
+
+  .image-upload-container {
+    display: flex; /* Maintain flexbox for horizontal arrangement */
+    justify-content: center; /* Center elements horizontally */
+    align-items: center; /* Center elements vertically */
+    gap: 10px; /* Adjust spacing between squares */
+  }
+  
+  .rounded-square {
+    width: 125px;
+    height: 125px;
+    background-color: #ddd;
+    border-radius: 10%; /* Create rounded square */
+  }
