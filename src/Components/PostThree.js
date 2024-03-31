@@ -15,6 +15,12 @@ function PostThree() {
         setText(e.target.value);
     };
 
+    const [rating, setRating] = useState(0);
+
+    const handleStarClick = (selectedRating) => {
+      setRating(selectedRating);
+    };
+
     
 
     return (
@@ -28,6 +34,17 @@ function PostThree() {
                 onChange={handleChange}
                 placeholder="Type here..."
             />
+        </div>
+        <div className="star-rating-container">
+            {[1, 2, 3, 4, 5].map((star) => (
+                <span
+                key={star}
+                className={star <= rating ? 'star-filled' : 'star-empty'}
+                onClick={() => handleStarClick(star)}
+                >
+                &#9733;
+                </span>
+            ))}
         </div>
 
         <Link to="/discover" onClick={() => handleNext('/discover')}>

@@ -34,4 +34,17 @@
     outline: none; /* Remove default focus border */
     overflow: hidden; /* Hide scrollbars */
   }
+
+  .star-rating-container {
+    font-size: 60px;
+  }
   
+  .star-filled {
+    color: gold;
+    cursor: pointer;
+  }
+  
+  .star-empty {
+    color: #ccc;
+    cursor: pointer;
+  }
