@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './styles/post.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faUser, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 function Post() {
   const [selectedCollaborator, setSelectedCollaborator] = useState('');
+  const [activeTab, setActiveTab] = useState('/post');
+
+  const handleNext = (tab) => {
+    setActiveTab(tab);
+  }
 
   const handleCollaboratorChange = (event) => {
     setSelectedCollaborator(event.target.value);
@@ -12,7 +18,8 @@ function Post() {
 
   const handleCollaboratorRemove = () => {
     setSelectedCollaborator("");
-  }
+  };
+
 
   return (
     <div className="discover-container">
@@ -56,10 +63,13 @@ function Post() {
           </div>
         )}
       </div>
-
-      <div className="next-button-container">
-        <button className="next-button">Next</button>
-      </div>
+      
+      <Link to="/postTwo" onClick={() => handleNext('/postTwo')}>
+        <div className="next-button-container">
+          <button className="next-button">Next</button>
+        </div>
+      </Link>
+      
     </div>
   );
 }

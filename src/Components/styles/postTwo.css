@@ -14,7 +14,8 @@
   
   .test{
     position: fixed;
-    top: 100px;
+    font-size: 32px;
+    top: 200px;
   }
 
   .next-button-container {
