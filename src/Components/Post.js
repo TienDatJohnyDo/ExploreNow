@@ -10,6 +10,10 @@ function Post() {
     setSelectedCollaborator(event.target.value);
   };
 
+  const handleCollaboratorRemove = () => {
+    setSelectedCollaborator("");
+  }
+
   return (
     <div className="discover-container">
       <h1 className="discover-label">POST</h1>
@@ -37,6 +41,7 @@ function Post() {
           <option value="Nathan Nguyen">Nathan Nguyen</option>
           <option value="David Bruce">David Bruce</option>
           <option value="Stephen Boyer">Stephen Boyer</option>
+          <option value="Lauren Cromwell">Lauren Cromwell</option>
           <option value="Alone">Alone</option>
           {/* Add more options as needed */}
         </select>
@@ -47,7 +52,7 @@ function Post() {
           <div className="selected-collaborator">
             <FontAwesomeIcon icon={faUser} color="black" size="lg" className="profile-icon" />
             <span className="collaborator-name">{selectedCollaborator}</span>
-            <FontAwesomeIcon icon={faMinus} color="black" size="lg" className="remove-icon" />
+            <FontAwesomeIcon icon={faMinus} color="black" size="lg" className="remove-icon" onClick={handleCollaboratorRemove} />
           </div>
         )}
       </div>
