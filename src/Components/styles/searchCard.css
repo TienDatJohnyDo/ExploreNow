@@ -12,17 +12,25 @@
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensure the image covers the entire card */
-    border-radius: 12px; /* Rounded corners */
+    border-radius: 10px; /* Rounded corners */
   }
   
   .label {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 8px; /* Adjust padding as needed */
-    /* background-color: rgba(0, 0, 0, 0.7); Semi-transparent background */
+    padding: 10px; /* Adjust padding as needed */
     color: white;
-    font-size: 14px; /* Adjust font size as needed */
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px; /* Adjust font size as needed */
+    font-family: "Sansation-Bold", Helvetica;
+    font-weight: 700;
     border-bottom-left-radius: 12px; /* Match card's rounded corner */
+  }
+
+  .image-filter {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 50%);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
   }

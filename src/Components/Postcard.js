@@ -1,5 +1,6 @@
 import React from "react";
 import './styles/postcard.css';
+import {Link} from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
@@ -57,6 +58,7 @@ export const BottomBar = ({ heartCount, commentCount }) => {
 const Postcard = ({post}) => {
   
     return (
+      <Link to="/postPage">
         <div className="postcard">
             <div className="user-overlay" style={{zIndex: 10}}>
                 <UserProfile post={post}/>
@@ -68,6 +70,7 @@ const Postcard = ({post}) => {
                 <BottomBar heartCount={post.heartCount} commentCount={post.commentCount} />
             </div>
         </div>
+      </Link>
     );
   };
   

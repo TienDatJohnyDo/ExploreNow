@@ -10,6 +10,7 @@ import Postcard from './Postcard';
 
 import laurenPic from './images/lauren.jpg'
 import postImage from './images/jasper.jpg'
+import banff1 from './images/banff1.jpg'
 
 const MyComponent = () => {
   // Define your components' array
@@ -20,10 +21,10 @@ const MyComponent = () => {
   const post1 = {
     profilePic: laurenPic,
     username: "Lauren",
-    image: postImage,
+    image: banff1,
     location: "Banff",
-    heartCount: "1.2 k",
-    commentCount: 600,
+    heartCount: "92",
+    commentCount: 7,
   };
 
   const post2 = {
