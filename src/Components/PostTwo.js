@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './styles/postTwo.css'; // Import your CSS file
 import postImage from './images/jasper.jpg'; // Import your image
 
 function PostTwo() {
   const [selectedImages, setSelectedImages] = useState([]);
+  const [acitveTab, setActiveTab] = useState('/postTwo');
   const MAX_IMAGES = 3;
 
   const handleAddImage = () => {
@@ -11,6 +13,10 @@ function PostTwo() {
       setSelectedImages([...selectedImages, postImage]); // Update with spread syntax
     }
   };
+
+  const handleNext = (tab) => {
+    setActiveTab(tab);
+  }
 
   return (
     <div className="discover-container">
@@ -39,9 +45,11 @@ function PostTwo() {
           Add Photos
         </button>
       </div>
-      <div className="next-button-container">
-        <button className="next-button">Next</button>
-      </div>
+      <Link to="/postThree" onClick={() => handleNext('/postThree')}>
+        <div className="next-button-container">
+          <button className="next-button">Next</button>
+        </div>
+      </Link>
     </div>
   );
 }

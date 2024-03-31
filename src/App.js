@@ -107,6 +107,7 @@ import Guestnavigation from './Components/Guestnavigation';
 import EntryPage from './Components/EntryPage';
 import NotifcationPage from './Components/NotificationPage';
 import PostTwo from './Components/PostTwo';
+import PostThree from './Components/PostThree';
 
 function App() {
   const location = useLocation();
@@ -137,6 +138,8 @@ function App() {
         <Route path="/GuestProfile" element={<GuestProfile />} />
         <Route path="/notificationPage" element={<NotifcationPage />} />
         <Route path="/postTwo" element={<PostTwo />}></Route>
+        <Route path="/postThree" element={<PostThree />}></Route>
+
         {/* Define routes for other components as needed */}
       </Routes>
     </div>
