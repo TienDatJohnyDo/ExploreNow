@@ -48,3 +48,9 @@
     color: #ccc;
     cursor: pointer;
   }
+
+  .desc-header {
+    position: relative;
+    top: 0;
+    font-size: large;
+  }
