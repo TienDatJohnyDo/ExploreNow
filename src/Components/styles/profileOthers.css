@@ -1,0 +1,203 @@
+.discover-container {
+  position: fixed;
+  top: 0; /* Adjust the top position to move the container closer to the top */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  color: white;
+}
+
+.discover-label {
+    position: absolute;
+    top: 10px; /* Adjust the top position to move the label down */
+    left: 30px; /* Adjust the left position to move the label right */
+    font-size: 30px;
+    font-weight: bold;
+    color: black; /* Change the color to ensure visibility */
+}
+
+.text-input {
+  /* New styles for the text input */
+  margin-top: 0px; /* Adjust the top margin to move the input field down */
+  width: 350px; /* Adjust the width as needed */
+  height: px; /* Adjust the height as needed */
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.o-more-icon {
+  position: absolute;
+  top: 35px; /* Adjust the top distance as needed */
+  right: 20px; /* Adjust the right distance as needed */
+  cursor: pointer;
+  font-size : 24px;
+  color: black;
+}
+
+.o-profile-info {
+  display: flex;
+  align-items: center;
+  color: black;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.o-profile-picture-container {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  overflow: hidden;
+}
+
+.o-profile-picture-container .o-profile-picture {
+  height: 100px;
+  object-fit: cover;
+  position: relative;
+  width: 100px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.o-profile-text {
+  margin-left: 30px;
+  width: 230px;
+}
+
+.o-profile-text h2 {
+  font-family: "Sansation-Bold", sans-serif;
+  letter-spacing: 1.6px;
+}
+
+.o-profile-text p {
+  font-family: "Sansation-Bold", sans-serif;
+  letter-spacing: 1.0px;
+}
+
+.o-profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.o-profile-stats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D2F6FE; 
+  padding: 10px; 
+  border-radius: 10px; 
+  width: 380px;
+  height: 70px; 
+  color: black;
+}
+.o-profile-stat .o-stat-number,
+.o-profile-stat .o-stat-category {
+  font-family: 'Sen', sans-serif;
+}
+
+.o-profile-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 70px; /* Add spacing between the stat items */
+}
+.o-profile-stat .o-stat-number {
+  /* font-weight: bold; */
+  font-size: 26px;
+  margin-bottom: 2px;
+}
+.o-profile-stat .o-stat-category{
+  font-size: 20px;
+  margin-top:2px;
+}
+
+.o-profile-stat:last-child {
+  margin-right: 0;
+}
+
+
+
+
+
+
+
+.o-follow-buttons {
+  display: grid;
+  height: 50px;
+  width: 400px;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 50px;
+  grid-gap: 0px;
+  border-radius: 10px;
+}
+
+.o-fcolumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.o-fcolumn-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.o-fcolumn-2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.o-frows-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.o-fbutton {
+  height: 30px;
+  width: 160px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-weight: bold;
+  font-family: 'Sen', sans-serif;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.o-follow-button {
+  border: 3px solid #1D4061;
+  background-color: #1D4061;
+  color: white;
+  grid-column: 3;
+  grid-row: 1;
+  margin-right: 10px;
+}
+
+.o-unfollow-button {
+  border: 3px solid #1D4061;
+  background-color: white;
+  color: #1D4061;
+  grid-column: 3;
+  grid-row: 1;
+  margin-right: 10px;
+}
+
+.o-msg-button {
+  border: 3px solid #1D4061;
+  background-color: white;
+  color: #1D4061;
+  grid-column: 4;
+  grid-row: 1;
+  margin-left: 10px;
+}

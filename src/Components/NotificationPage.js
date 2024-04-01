@@ -2,7 +2,14 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 import './styles/notificationPage.css';
+
 import laurenPic from './images/lauren.jpg'
+import maryPic from './images/mary.jpg'
+import jamesPic from './images/james.jpg'
+import charlesPic from './images/charles.jpg'
+import sarahPic from './images/sarah.jpg'
+import zacPic from './images/zac.jpg'
+
 
 
 const CollabBox = ({pic, user, msg}) => {
@@ -70,9 +77,9 @@ const RecentActivityGrid = () => {
           marginBlockStart="20px"
           style={{ maxHeight: '170px',
                   overflow: 'auto'}}>
-      <Grid item><RecentActivity key={1} pic={laurenPic} user={"User 5"} msg={"Created a new post."}/></Grid>
-      <Grid item><RecentActivity key={2} pic={laurenPic} user={"User 7"} msg={"Liked a post."}/></Grid>
-      <Grid item><RecentActivity key={3} pic={laurenPic} user={"User 9"} msg={"Commented on a post."}/></Grid>
+      <Grid item><RecentActivity key={1} pic={charlesPic} user={"Charles"} msg={"Created a new post."}/></Grid>
+      <Grid item><RecentActivity key={2} pic={jamesPic} user={"James"} msg={"Liked your post."}/></Grid>
+      <Grid item><RecentActivity key={3} pic={maryPic} user={"Mary"} msg={"Commented on your post."}/></Grid>
     </Grid>
   );
 };
@@ -92,8 +99,8 @@ function NotifcationPage() {
       <div className='follow-container'>
         <h1 className="title">Follow Requests</h1>
         <div className='box1'>
-            <FollowBox pic={laurenPic} user={"User 5"} />
-            <FollowBox pic={laurenPic} user={"User 9"} />
+            <FollowBox pic={sarahPic} user={"Sarah"} />
+            <FollowBox pic={zacPic} user={"Zac"} />
         </div>
         <div className="more">More (10)</div>
       </div>

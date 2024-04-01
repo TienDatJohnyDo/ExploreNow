@@ -6,6 +6,7 @@ const SearchCard = ({image, labelText}) => {
     return (
         <div className="square-card">
           <img src={image} alt="Card" className="card-image" />
+          <div className="image-filter" />
           <div className="label">{labelText}</div>
         </div>
       );

@@ -6,7 +6,7 @@ import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'; // Importing th
 import Postcard from './ProfilePosts';
 import laurenPic from './images/lauren.jpg'
 import jasper from './images/jasper.jpg'
-import banff from './images/banff.jpg'
+import banff from './images/banff1.jpg'
 import lakeLouise from './images/lakeLouise.jpg'
 
 
@@ -15,16 +15,16 @@ const MyComponent = () => {
   const post1 = {
     profilePic: laurenPic,
     username: "Lauren",
-    image: jasper,
+    image: banff,
     location: "Banff",
-    heartCount: "1.2 k",
-    commentCount: 400,
+    heartCount: "92",
+    commentCount: 7,
   };
 
   const post2 = {
     profilePic: laurenPic,
     username: "User 2",
-    image: banff,
+    image: jasper,
     location: "Jasper",
     heartCount: "1.5 k",
     commentCount: 300,
