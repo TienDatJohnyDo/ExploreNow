@@ -9,14 +9,16 @@ import { faLocationDot, faHeart, faComment } from '@fortawesome/free-solid-svg-i
 // UserProfile component
 export const UserProfile = ({ post }) => {
   return (
-    <div className="profile-box" onClick={() => console.log("User clicked")}>
-      <div className="user">
+    <div className="c-profile-box" onClick={() => console.log("User clicked")}>
+      <Link to={post.profileLink}>
+      <div className="c-user">
         <div className="overlap-group">
           <div className="rectangle" />
           <img className="ellipse" alt="Ellipse" src={post.profilePic} />
           <div className="text-wrapper">{post.username}</div>
         </div>
       </div>
+      </Link>
     </div>
   );
 };
@@ -58,7 +60,7 @@ export const BottomBar = ({ heartCount, commentCount }) => {
 const Postcard = ({post}) => {
   
     return (
-      <Link to="/postPage">
+      <Link to={post.link}>
         <div className="postcard">
             <div className="user-overlay" style={{zIndex: 10}}>
                 <UserProfile post={post}/>

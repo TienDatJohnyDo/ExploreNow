@@ -9,7 +9,7 @@
   }
 
 /* user Profile icon + name style  */
-  .profile-box {
+  .c-profile-box {
     display: flex;
     align-items: center;
     background-color: #5d5d5d;
@@ -17,19 +17,20 @@
     z-index: 10px;
   }
   
-  .profile-box .user {
+  .c-profile-box .c-user {
     height: 60px;
     position: absolute;
     margin-left: 20px;
+    margin-top: -30px;
   }
   
-  .profile-box .overlap-group {
+  .c-profile-box .overlap-group {
     height: 60px;
     position: relative;
     width: 177px;
   }
   
-  .profile-box .rectangle {
+  .c-profile-box .rectangle {
     background-color: #1c4060;
     border-radius: 10px;
     height: 28px;
@@ -39,7 +40,7 @@
     width: 133px;
   }
   
-  .profile-box .ellipse {
+  .c-profile-box .ellipse {
     height: 60px;
     object-fit: cover;
     position: relative;
@@ -47,7 +48,7 @@
     border-radius: 50%;
   }
   
-  .profile-box .text-wrapper {
+  .c-profile-box .text-wrapper {
     color: #ffffff;
     font-family: "Sansation-Bold", Helvetica;
     font-size: 16px;

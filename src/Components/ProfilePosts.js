@@ -1,5 +1,6 @@
 import React from "react";
 import './styles/postcard.css';
+import {Link} from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
@@ -39,9 +40,10 @@ export const BottomBar = ({ heartCount, commentCount }) => {
 };
 
 // Postcard component
-const Postcard = ({post}) => {
+const ProfilePosts = ({post, link}) => {
   
     return (
+      <Link to={link}>
         <div className="postcard">
             <div className="img-bar" style={{zIndex: 5}}>
                 <ImageBox post={post} />
@@ -50,8 +52,9 @@ const Postcard = ({post}) => {
                 <BottomBar heartCount={post.heartCount} commentCount={post.commentCount} />
             </div>
         </div>
+      </Link>
     );
   };
   
   // Export the Postcard component
-  export default Postcard;
+  export default ProfilePosts;

@@ -1,26 +1,12 @@
 // Discover.js
 import React, { useState } from 'react';
-import { Grid, colors } from '@mui/material';
+import { Grid } from '@mui/material';
 import {Link} from 'react-router-dom';
 import './styles/postPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookmark, faHeart, faStar, faXmark} from '@fortawesome/free-solid-svg-icons';
-
-import laurenPic from './images/lauren.jpg'
-import michaelPic from './images/michael.jpg'
-import maryPic from './images/mary.jpg'
-import jamesPic from './images/james.jpg'
-import robertPic from './images/robert.jpg'
-import lindaPic from './images/linda.jpg'
-import sarahPic from './images/sarah.jpg'
-import zacPic from './images/zac.jpg'
+import { faBookmark, faHeart, faStar, faXmark, faCaretLeft, faCaretRight} from '@fortawesome/free-solid-svg-icons';
 
 import collabIcon from './images/collabIcon.png'
-import postImage from './images/jasper.jpg'
-import topImg from './images/banff1.jpg'
-import img1 from './images/banff1.jpg'
-import img2 from './images/banff.jpg'
-
 
 
 export const UserProfile = ({ post }) => {
@@ -28,52 +14,53 @@ export const UserProfile = ({ post }) => {
     const [open, setOpen] = useState(false);
 
     return (
-      <div className="profile-box" onClick={() => console.log("User clicked")}>
-        <div className="user">
-          <div className="overlap-group">
-            <div className="rectangle" />
-            <img className="ellipse" alt="Ellipse" src={post.profilePic} />
-            <div className="text-wrapper">{post.username}</div>
-          </div>
+        <div className="profile-box" >
+            <Link to={post.profileLink}>
+                <div className="user">
+                    <div className="overlap-group">
+                        <div className="rectangle" />
+                        <img className="ellipse" alt="Ellipse" src={post.profilePic} />
+                        <div className="text-wrapper">{post.username}</div>
+                    </div>
+                </div>
+            </Link>
+            <div className="collab" onClick={() => setOpen(true)}>
+                <div className="collab-group">
+                    <div className="rectangle2" />
+                    <img className="ellipse2" alt="Ellipse2" src={collabIcon} />
+                    <div className="text-wrapper2">Collaborators</div>
+                </div>
+            </div>
+            {open ? <Popup post ={post} closePopup={() => setOpen(false)} /> : null}
         </div>
-        <div className="collab" onClick={() => setOpen(true)}>
-          <div className="collab-group">
-            <div className="rectangle2" />
-            <img className="ellipse2" alt="Ellipse2" src={collabIcon} />
-            <div className="text-wrapper2">Collaborators</div>
-          </div>
-        </div>
-        {open ? <Popup text="Hello there!" closePopup={() => setOpen(false)} /> : null}
-      </div>
     );
 };
 
+const HomePage = ({ post }) => {
 
-const HomePage = () => {
+    const [open, setOpen] = useState(false);
 
     return (
         <div className='home-page'>
             <div className='photos-box'>
                 <div className="h-column h-column-1">
                     <div className="h-rows-wrapper">
-                        <img className="h-row h-row-1" alt='first' src={img1} />   
-                        <img className="h-row h-row-2" alt='second' src={img2} />
+                        <img className="h-row h-row-1" alt='first' src={post.images[0]} onClick={() => setOpen(true)}/>   
+                        <img className="h-row h-row-2" alt='second' src={post.images[1]} onClick={() => setOpen(true)}/>
                     </div>
                 </div>
                 <div className="h-column h-column-2">
-                    <img className="more-image" alt='more' src={img1} />  
+                    <img className="more-image" alt='more' src={post.images[2]} />  
                     <div className="more-image-filter" />
-                    <span>8+</span>
-                    <div className='empty'/>   
+                    <span>+{post.images.length-2}</span>
+                    <div className='empty' onClick={() => setOpen(true)}/>   
                 </div>
             </div>
             <div className='description-tag'>
-                <h4>16/07/2023</h4>
-                <p>During my unforgettable trip to Banff National Park, 
-                    I reveled in the glassy turquoise lakes, marveled at 
-                    abundant wildlife, and stood in awe of the majestic 
-                    Canadian Rockies—nature’s pristine masterpiece!  </p>
+                {post.date}
+                {post.description}
             </div>
+            {open ? <ImagePopup images={post.images} closePopup={() => setOpen(false)} /> : null}
         </div>
     );
 };
@@ -94,29 +81,30 @@ const Comments = ({pic, user, msg}) => {
     );
 };
 
-const CommentsGrid = () => {
-  return (
-    <Grid container justify="center" 
-          spacing={1} 
-          direction="row"
-          marginBlockStart="20px"
-          style={{ maxHeight: '320px',
-                  overflow: 'auto'}}>
-      <Grid item><Comments key={1} pic={maryPic} user={"Mary"} msg={"This place was wonderful!"}/></Grid>
-      <Grid item><Comments key={2} pic={jamesPic} user={"James"} msg={"Nicee"}/></Grid>
-      <Grid item><Comments key={3} pic={michaelPic} user={"Michael"} msg={"Photos turned out great"}/></Grid>
-      <Grid item><Comments key={4} pic={robertPic} user={"Robert"} msg={"Can't wait to go there!"}/></Grid>
-      <Grid item><Comments key={5} pic={lindaPic} user={"Linda"} msg={"So pretty"}/></Grid>
-      <Grid item><Comments key={6} pic={sarahPic} user={"Sarah"} msg={"Added to my bucket list!"}/></Grid>
-      <Grid item><Comments key={7} pic={zacPic} user={"Zac"} msg={"Hehahah"}/></Grid>
-    </Grid>
-  );
+const CommentsGrid = ({post}) => {
+    
+    return (
+        <Grid container justify="center" 
+            spacing={1} 
+            direction="row"
+            marginBlockStart="20px"
+            style={{ maxHeight: '320px',
+                    overflow: 'auto'}}>
+            {post.commentPic.map((pic, index) => (
+                <Grid item key={index}><Comments 
+                    pic={pic} 
+                    user={post.commentUser[index]} 
+                    msg={post.commentMsg[index]}
+                /></Grid>
+            ))}
+        </Grid>
+    );
 };
 
-const CommentsPage = () => {
+const CommentsPage = ({post}) => {
     return (
         <div className='comments-page'>
-            <CommentsGrid />
+            <CommentsGrid post={post}/>
             <div className='comment-text-box'>
                 <input 
                     type="text"
@@ -128,47 +116,111 @@ const CommentsPage = () => {
     );
 };
 
-export const Popup = ({ text, closePopup }) => {
+const CollabUsers = ({user, pic}) => {
     return (
-      <div className="popup-container">
-       <div className="popup-body">
-        <div className="close" onClick={closePopup}>
-            <FontAwesomeIcon icon={faXmark} className="X-icon" style={{color: "#1D4061",}} />
+        <div className="Cbox">
+            <div className="Ccolumn Ccolumn-1">
+                <img src={pic} alt="CProfile" className="Cprofile-picture"/>
+            </div>
+            <div className="Ccolumn Ccolumn-2">
+                <div className="Crow Crow-1">{user}</div>
+            </div>
         </div>
-        <div className='collabTitle'>Collaborators</div>
-        <div className='collabList'>
-            <CollabUsers pic={jamesPic} user={"James"}/>
-            <CollabUsers pic={maryPic} user={"Mary"}/>
-            <CollabUsers pic={michaelPic} user={"Michael"}/>
-        </div>
-       </div>
-      </div>
     );
 };
 
-const CollabUsers = ({pic, user}) => {
+const CollabsGrid = ({post}) => {
+    
     return (
-      <div className="Cbox">
-        <div className="Ccolumn Ccolumn-1">
-          <img src={pic} alt="CProfile" className="Cprofile-picture"/>
-        </div>
-        <div className="Ccolumn Ccolumn-2">
-            <div className="Crow Crow-1">{user}</div>
-        </div>
-      </div>
+        <Grid container 
+            justify="center" 
+            spacing={0.5} 
+            direction="row"
+            style={{ maxHeight: '180px',
+                    overflowY: 'auto'}}>
+            {post.collabs.map((user, index) => (
+                <Grid item key={index}><CollabUsers 
+                    pic={post.collabPics[index]} 
+                    user={user}
+                /></Grid>
+            ))}
+        </Grid>
     );
 };
 
-function PostPage() {
+export const Popup = ({ post, closePopup }) => {
+    return (
+        <div className="popup-container">
+            <div className="popup-body">
+                <div className="close" onClick={closePopup}>
+                    <FontAwesomeIcon icon={faXmark} className="X-icon" style={{color: "#1D4061",}} />
+                </div>
+                <div className='collabTitle'>Collaborators</div>
+                <div className='collabList'>
+                    <CollabsGrid post={post} />
+                </div>
+            </div>
+        </div>
+    );
+};
 
-    const post = {
-        profilePic: laurenPic,
-        username: "Lauren",
-        image: postImage,
-        location: "Banff",
-        heartCount: "1.2 k",
-        commentCount: 600,
+const ImagePopup = ({ images, closePopup }) => {
+    return (
+        <div className="i-popup-container">
+            <div className="i-popup-body">
+                <div className="i-close" onClick={closePopup}>
+                    <FontAwesomeIcon icon={faXmark} className="i-X-icon" style={{color: "#1D4061",}} />
+                </div>
+                <div className='top-gap'/>
+                <ImageGallery images={images} />
+            </div>
+        </div>
+    );
+};
+
+const ImageGallery = ({ images }) => {
+    const [currentImage, setCurrentImage] = useState(0);
+
+    const onNext = () => {
+        setCurrentImage((currentImage + 1) % images.length);
     };
+    
+    const onPrev = () => {
+        setCurrentImage((currentImage - 1 + images.length) % images.length);
+    };
+  
+    return (
+        <div className="image-gallery">
+            <div className='image-container'>
+                <img src={images[currentImage]} alt="" className="image-gallery-image" />
+            </div>
+            <ImageCounter
+                currentImage={currentImage}
+                totalImages={images.length}
+                onNext={onNext}
+                onPrev={onPrev}
+            />
+        </div>
+    );
+};
+
+const ImageCounter = ({ currentImage, totalImages, onNext, onPrev }) => {
+    return (
+        <div className="image-counter">
+            <button className="nav-btn" onClick={onPrev}>
+                <FontAwesomeIcon icon={faCaretLeft} className="left-arrow" />
+            </button>
+            <div className="image-counter-text">
+                {currentImage + 1}/{totalImages}
+            </div>
+            <button className="nav-btn" onClick={onNext}>
+                <FontAwesomeIcon icon={faCaretRight} className="right-arrow" /> 
+            </button>
+        </div>
+    );
+};
+
+function PostPage({post}) {
 
     const [isBookmarkSelected, setBookmarkSelected] = useState(false);
     const [isLikeSelected, setLikeSelected] = useState(false);
@@ -178,7 +230,7 @@ function PostPage() {
         <div className="postpage-container">
             <div className='top'>
                 <div className='main-img-box'>
-                    <img className="main-image" alt='main' src={topImg} />   
+                    <img className="main-image" alt='main' src={post.images[0]} />   
                     <div className="image-filter" />
                 </div>
                 <div className="overimage-container">
@@ -189,12 +241,12 @@ function PostPage() {
                         />
                     </div>
                     <div className="location">
-                        <span>BANFF</span>
+                        <span>{post.location}</span>
                     </div>
                     <div className="rating-tag">
                         <div className="rating-box">
                             <div className="rectangle">
-                                <span>4.5</span>
+                                <span>{post.rating}</span>
                                 <FontAwesomeIcon icon={faStar} className="star-icon" style={{color: "#F4BA23",}} />
                             </div>
                         </div>
@@ -211,7 +263,7 @@ function PostPage() {
                 <div className="user-overlay" style={{zIndex: 10}}>
                     <UserProfile post={post}/>
                 </div>
-                <div className="bottom-main" style={{zIndex: 5}}>
+                <div className="bottom-main" style={{zIndex: 10}}>
                     <div className="row-1 column-1">
                         <div className={`b ${selectedPage === 'HomePage' ? 'b-selected' : ''}`}
                             onClick={() => setSelectedPage(selectedPage === 'CommentsPage' ? 'HomePage' : 'CommentsPage')}>
@@ -225,8 +277,8 @@ function PostPage() {
                         </div>
                     </div>
                     <div className='contents'>
-                        {selectedPage === 'HomePage' && <HomePage />}
-                        {selectedPage === 'CommentsPage' && <CommentsPage />}
+                        {selectedPage === 'HomePage' && <HomePage post={post}/>}
+                        {selectedPage === 'CommentsPage' && <CommentsPage post={post} />}
                     </div>
                 </div>
             </div>
