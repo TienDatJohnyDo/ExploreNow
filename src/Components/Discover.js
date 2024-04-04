@@ -35,7 +35,8 @@ const MyComponent = () => {
     heartCount: "92",
     commentCount: 7,
     link: "/laurenPost",
-    profileLink: "/laurenProfile",
+    profileLink: "/profile",
+    showProfile: true,
   };
 
   const post2 = {
@@ -47,6 +48,7 @@ const MyComponent = () => {
     commentCount: 55,
     link: "/charlesPost",
     profileLink: "/charlesProfile",
+    showProfile: true,
   };
 
   const post3 = {
@@ -54,10 +56,11 @@ const MyComponent = () => {
     username: "Lisa",
     image: santorini,
     location: "Santorini",
-    heartCount: "1.2 k",
+    heartCount: "1,302",
     commentCount: 422,
     link: "/lisaPost",
     profileLink: "/lisaProfile",
+    showProfile: true,
   };
 
   const post4 = {
@@ -69,7 +72,7 @@ const MyComponent = () => {
     commentCount: 123,
     link: "/nancyPost",
     profileLink: "/nancyProfile",
-
+    showProfile: true,
   };
 
   const post5 = {
@@ -81,6 +84,7 @@ const MyComponent = () => {
     commentCount: 192,
     link: "/danielPost",
     profileLink: "/danielProfile",
+    showProfile: true,
   };
 
   return (

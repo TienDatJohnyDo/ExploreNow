@@ -3,7 +3,7 @@ import { Grid } from '@mui/material';
 import './styles/profile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'; // Importing the "more" icon
-import Postcard from './ProfilePosts';
+import Postcard from './Postcard';
 import laurenPic from './images/lauren.jpg'
 import jasper from './images/jasper.jpg'
 import banff from './images/banff1.jpg'

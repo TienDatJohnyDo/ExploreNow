@@ -16,6 +16,17 @@
   color: white;
 }
 
+.fixed-top {
+  position: fixed;
+  top: 0;
+  margin-top: 30px;
+}
+
+.fixed-bottom {
+  top: 250;
+  margin-top: 250px;
+}
+
 .discover-label {
     position: absolute;
     top: 10px; /* Adjust the top position to move the label down */
@@ -34,13 +45,26 @@
   border: 1px solid black;
   border-radius: 10px;
 }
+
+.top-tag{
+  width: 400px;
+  height: 40px;
+  margin-top: -10px;
+}
+
+.o-back-button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
 .o-more-icon {
   position: absolute;
-  top: 35px; /* Adjust the top distance as needed */
   right: 20px; /* Adjust the right distance as needed */
   cursor: pointer;
   font-size : 24px;
   color: black;
+  height: 30px;
 }
 
 .o-profile-info {
@@ -48,7 +72,8 @@
   align-items: center;
   color: black;
   margin-bottom: 20px;
-  margin-top: 10px;
+  margin-top: -10px;
+  margin-left: 20px;
 }
 
 .o-profile-picture-container {
@@ -68,7 +93,7 @@
 }
 
 .o-profile-text {
-  margin-left: 30px;
+  margin-left: 20px;
   width: 230px;
 }
 

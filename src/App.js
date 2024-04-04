@@ -108,6 +108,7 @@ import NotifcationPage from './Components/NotificationPage';
 
 /* Profile pages imports here */
 import Profile from './Components/Profile'; 
+import MyProfile from './Components/profilePages/MyProfile'
 import ProfileOthers from './Components/ProfileOthers'; 
 import CharlesProfile from './Components/profilePages/CharlesProfile'
 import LisaProfile from './Components/profilePages/LisaProfile'
@@ -153,6 +154,7 @@ function App() {
 
         {/* Profile pages routes here */}
         <Route path="/profile" element={<Profile />} />
+        <Route path="/myProfile" element={<MyProfile />} />    // Still working on it not complete
         <Route path="/profileOthers" element={<ProfileOthers />} />
         <Route path="/charlesProfile" element={<CharlesProfile />} />
         <Route path="/lisaProfile" element={<LisaProfile />} />

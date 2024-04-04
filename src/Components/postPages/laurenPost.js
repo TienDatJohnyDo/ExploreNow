@@ -22,7 +22,7 @@ import img5 from '../images/banff4.jpg'
 function laurenPost() {
 
     const post = {
-        profileLink: "/laurenProfile",
+        profileLink: "/profile",
         profilePic: laurenPic,
         username: "Lauren",
         images: [img1, img2, img3, img4, img5],
