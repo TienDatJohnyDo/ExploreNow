@@ -67,10 +67,17 @@
     height: 70px;
   }
 
+.back-button {
+  width: 30px;
+  height: 40px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
 .bookmark-icon {
     width: 30px;
     height: 30px;
-    margin-left: 390px;  
+    margin-left: 340px;  
 }
 
 

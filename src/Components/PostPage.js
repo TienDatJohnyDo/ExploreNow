@@ -1,10 +1,10 @@
 // Discover.js
 import React, { useState } from 'react';
 import { Grid } from '@mui/material';
-import {Link} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './styles/postPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookmark, faHeart, faStar, faXmark, faCaretLeft, faCaretRight} from '@fortawesome/free-solid-svg-icons';
+import { faBookmark, faHeart, faStar, faXmark, faCaretLeft, faCaretRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 import collabIcon from './images/collabIcon.png'
 
@@ -225,6 +225,11 @@ function PostPage({post}) {
     const [isBookmarkSelected, setBookmarkSelected] = useState(false);
     const [isLikeSelected, setLikeSelected] = useState(false);
     const [selectedPage, setSelectedPage] = useState('HomePage');
+    const navigate = useNavigate();
+
+    const goBack = () => {
+        navigate(-1);
+    };
 
     return (
         <div className="postpage-container">
@@ -235,6 +240,8 @@ function PostPage({post}) {
                 </div>
                 <div className="overimage-container">
                     <div className="bookmark-tag">
+                        <FontAwesomeIcon icon={faArrowLeft} className="back-button" style={{color: "#FFFFFF",}} 
+                        onClick={goBack}/>
                         <FontAwesomeIcon icon={faBookmark} className={`bookmark-icon ${isBookmarkSelected ? 'selected' : ''}`}
                         style={{ color: isBookmarkSelected ? '#F4BA23' : '#FFFFFF' }}
                         onClick={() => setBookmarkSelected(!isBookmarkSelected)}
