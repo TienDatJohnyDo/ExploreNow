@@ -28,6 +28,7 @@ function CharlesProfile() {
       heartCount: "374",
       commentCount: 55,
       link: "/charlesPost",
+      notShowProfile: true,
     }
   ];
 

@@ -123,6 +123,15 @@ import LisaPost from './Components/postPages/lisaPost';
 import NancyPost from './Components/postPages/nancyPost';
 import DanielPost from './Components/postPages/danielPost';
 
+/* Seachpage categories imports here*/
+import Trending from './Components/searchCategories/Trending';
+import Food from './Components/searchCategories/Food';
+import Banff from './Components/searchCategories/Banff';
+import Jasper from './Components/searchCategories/Jasper';
+import Seoul from './Components/searchCategories/Seoul';
+import Paris from './Components/searchCategories/Paris';
+import Santorini from './Components/searchCategories/Santorini';
+import Tokyo from './Components/searchCategories/Tokyo';
 
 function App() {
   const location = useLocation();
@@ -169,6 +178,17 @@ function App() {
         <Route path="/lisaPost" element={<LisaPost />} />
         <Route path="/nancyPost" element={<NancyPost />} />
         <Route path="/danielPost" element={<DanielPost />} />
+
+        {/* Seachpage categories routes here */}
+        <Route path="/trending" element={<Trending />} />
+        <Route path="/foods" element={<Food />} />
+        <Route path="/banff" element={<Banff />} />
+        <Route path="/jasper" element={<Jasper />} />
+        <Route path="/seoul" element={<Seoul />} />
+        <Route path="/paris" element={<Paris />} />
+        <Route path="/santorini" element={<Santorini />} />
+        <Route path="/tokyo" element={<Tokyo />} />
+
         {/* Define routes for other components as needed */}
       </Routes>
     </div>

@@ -22,7 +22,6 @@ function SearchPage() {
   return (
     <div className="search-container">
       <h1 className="search-header">Where to?</h1>
-      {/* <FontAwesomeIcon icon={faBell} className='notification-bell' /> */}
       <div className='search-bar'> 
             <input 
             type="text"
@@ -40,8 +39,8 @@ function SearchPage() {
           style={{ maxHeight: '400px',
                    overflow: 'auto'}}>
 
-            <Grid item> <SearchCard image={trendImg} labelText={'Trending Destinations'}> </SearchCard> </Grid>
-            <Grid item> <SearchCard image={foodImg} labelText={'Food Destinations'}> </SearchCard> </Grid>
+            <Grid item> <SearchCard image={trendImg} labelText={'Trending Destinations'} link={"/trending"}> </SearchCard> </Grid>
+            <Grid item> <SearchCard image={foodImg} labelText={'Food Destinations'} link={"/foods"}> </SearchCard> </Grid>
             <Grid item> <SearchCard image={postImage} labelText={'???'}> </SearchCard> </Grid>
             <Grid item> <SearchCard image={postImage} labelText={'???'}> </SearchCard> </Grid>
             <Grid item> <SearchCard image={postImage} labelText={'???'}> </SearchCard> </Grid>
@@ -60,12 +59,12 @@ function SearchPage() {
           style={{ maxHeight: '380px',
                    overflow: 'auto'}}>
 
-            <Grid item xs={6}> <SearchCard image={jasper} labelText={'Jasper, Canada'}> </SearchCard> </Grid>
-            <Grid item xs={6}> <SearchCard image={banff} labelText={'Banff, Canada'}> </SearchCard> </Grid>
-            <Grid item xs={6}> <SearchCard image={seoul} labelText={'Seoul, Korea'}> </SearchCard> </Grid>
-            <Grid item xs={6}> <SearchCard image={paris} labelText={'Paris, France'}> </SearchCard> </Grid>
-            <Grid item xs={6}> <SearchCard image={santorini} labelText={'Santorini, Greece'}> </SearchCard> </Grid>
-            <Grid item xs={6}> <SearchCard image={tokyo} labelText={'Tokyo, Japan'}> </SearchCard> </Grid>
+            <Grid item xs={6}> <SearchCard image={jasper} labelText={'Jasper, Canada'} link={"/jasper"}> </SearchCard> </Grid>
+            <Grid item xs={6}> <SearchCard image={banff} labelText={'Banff, Canada'} link={"/banff"}> </SearchCard> </Grid>
+            <Grid item xs={6}> <SearchCard image={seoul} labelText={'Seoul, Korea'} link={"/seoul"}> </SearchCard> </Grid>
+            <Grid item xs={6}> <SearchCard image={paris} labelText={'Paris, France'} link={"/paris"}> </SearchCard> </Grid>
+            <Grid item xs={6}> <SearchCard image={santorini} labelText={'Santorini, Greece'} link={"/santorini"}> </SearchCard> </Grid>
+            <Grid item xs={6}> <SearchCard image={tokyo} labelText={'Tokyo, Japan'} link={"/tokyo"}> </SearchCard> </Grid>
 
         </Grid>
 

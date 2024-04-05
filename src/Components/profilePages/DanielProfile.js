@@ -26,12 +26,14 @@ function DanielProfile() {
       heartCount: 403,
       commentCount: 192,
       link: '/danielPost',
+      notShowProfile: true,
     },
     {
       image: jasper,
       location: "Jasper",
       heartCount: "1.5 k",
       commentCount: 300,
+      notShowProfile: true,
     }
   ];
 

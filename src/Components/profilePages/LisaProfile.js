@@ -25,18 +25,21 @@ function LisaProfile() {
       heartCount: "1.2 k",
       commentCount: 422,
       link: '/lisaPost',
+      notShowProfile: true,
     },
     {
       image: jasper,
       location: "Jasper",
       heartCount: "1.5 k",
       commentCount: 300,
+      notShowProfile: true,
     },
     {
       image: lakeLouise,
       location: "Lake Louise",
       heartCount: "2.2 k",
       commentCount: 500,
+      notShowProfile: true,
     }
   ];
 
