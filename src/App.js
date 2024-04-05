@@ -105,7 +105,6 @@ import NavigationBar from './Components/NavigationBar';
 import Guestnavigation from './Components/Guestnavigation';
 import EntryPage from './Components/EntryPage';
 import NotifcationPage from './Components/NotificationPage';
-import SavedPosts from './Components/SavedPosts';
 
 /* Profile pages imports here */
 import Profile from './Components/Profile'; 
@@ -160,7 +159,6 @@ function App() {
         <Route path="/GuestPost" element={<GuestPost />} />
         <Route path="/GuestProfile" element={<GuestProfile />} />
         <Route path="/notificationPage" element={<NotifcationPage />} />
-        <Route path="/savedPost" element={<SavedPosts />} />
         <Route path="/post" element={<Post />} />
 
         {/* Profile pages routes here */}
@@ -190,7 +188,6 @@ function App() {
         <Route path="/paris" element={<Paris />} />
         <Route path="/santorini" element={<Santorini />} />
         <Route path="/tokyo" element={<Tokyo />} />
-
 
         {/* Define routes for other components as needed */}
       </Routes>
