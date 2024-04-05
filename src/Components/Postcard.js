@@ -63,7 +63,7 @@ const Postcard = ({post}) => {
       <Link to={post.link}>
         <div className="postcard">
             <div className="user-div">
-              {post.showProfile && 
+              {!post.notShowProfile && 
                 <div className="user-overlay" style={{zIndex: 10}}>
                   <UserProfile post={post}/>
                 </div>}

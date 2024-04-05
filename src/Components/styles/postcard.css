@@ -113,12 +113,12 @@
 
   .location-tag span {
     font-size: 30px;
-    margin-right: 100px;
     margin-left: 20px;
     color: white;
     letter-spacing: 1.6px;
     font-family: "Sansation-Bold", Helvetica;
     font-weight: 700;
+    width: 320px;
   }
   
 

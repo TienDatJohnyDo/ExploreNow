@@ -19,6 +19,7 @@ const MyComponent = () => {
     location: "Banff",
     heartCount: "92",
     commentCount: 7,
+    notShowProfile: true,
   };
 
   const post2 = {
@@ -28,6 +29,7 @@ const MyComponent = () => {
     location: "Jasper",
     heartCount: "1.5 k",
     commentCount: 300,
+    notShowProfile: true,
   };
 
   const post3 = {
@@ -37,6 +39,7 @@ const MyComponent = () => {
     location: "Lake Louise",
     heartCount: "2.2 k",
     commentCount: 500,
+    notShowProfile: true,
   };
 
   return (

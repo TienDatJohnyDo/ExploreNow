@@ -25,18 +25,21 @@ function NancyProfile() {
       heartCount: 600,
       commentCount: 123,
       link: '/nancyPost',
+      notShowProfile: true,
     },
     {
       image: jasper,
       location: "Jasper",
       heartCount: "1.5 k",
       commentCount: 300,
+      notShowProfile: true,
     },
     {
       image: lakeLouise,
       location: "Lake Louise",
       heartCount: "2.2 k",
       commentCount: 500,
+      notShowProfile: true,
     }
   ];
 
