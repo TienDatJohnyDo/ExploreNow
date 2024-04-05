@@ -14,10 +14,19 @@
 .search-header {
   position: absolute;
   top: 10px;
-  left: 30px;
+  left: 20px;
   font-size: 30px;
   font-weight: bold;
-  color: black;
+  color: #1D4061;
+  font-family: 'Sen', sans-serif;
+}
+
+.yml-header {
+  font-family: 'Sen', sans-serif;
+  color: #1D4061;
+  position: absolute;
+  top: 350px;
+  left: 20px;
 }
 
 .notification-bell {

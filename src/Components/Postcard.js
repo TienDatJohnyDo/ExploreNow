@@ -1,5 +1,6 @@
 import React from "react";
 import './styles/postcard.css';
+import {Link} from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
@@ -8,14 +9,16 @@ import { faLocationDot, faHeart, faComment } from '@fortawesome/free-solid-svg-i
 // UserProfile component
 export const UserProfile = ({ post }) => {
   return (
-    <div className="profile-box" onClick={() => console.log("User clicked")}>
-      <div className="user">
+    <div className="c-profile-box">
+      <Link to={post.profileLink}>
+      <div className="c-user">
         <div className="overlap-group">
           <div className="rectangle" />
           <img className="ellipse" alt="Ellipse" src={post.profilePic} />
           <div className="text-wrapper">{post.username}</div>
         </div>
       </div>
+      </Link>
     </div>
   );
 };
@@ -23,7 +26,7 @@ export const UserProfile = ({ post }) => {
 // Image component
 const ImageBox = ({ post }) => {
   return (
-    <div className="img-box" onClick={() => console.log("Post clicked")}>
+    <div className="img-box">
         <img className="box-image" alt='postcard' src={post.image} />
         <div className="image-overlay" />
         <div className="location-tag-container">
@@ -57,9 +60,13 @@ export const BottomBar = ({ heartCount, commentCount }) => {
 const Postcard = ({post}) => {
   
     return (
+      <Link to={post.link}>
         <div className="postcard">
-            <div className="user-overlay" style={{zIndex: 10}}>
-                <UserProfile post={post}/>
+            <div className="user-div">
+              {!post.notShowProfile && 
+                <div className="user-overlay" style={{zIndex: 10}}>
+                  <UserProfile post={post}/>
+                </div>}
             </div>
             <div className="img-bar" style={{zIndex: 5}}>
                 <ImageBox post={post} />
@@ -68,6 +75,7 @@ const Postcard = ({post}) => {
                 <BottomBar heartCount={post.heartCount} commentCount={post.commentCount} />
             </div>
         </div>
+      </Link>
     );
   };
   

@@ -24,6 +24,7 @@
     font-size: 30px;
     font-weight: bold;
     color: black; /* Change the color to ensure visibility */
+    font-family: 'Sen', sans-serif;
 }
 
 .posts-container {
