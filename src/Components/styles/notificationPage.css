@@ -285,6 +285,10 @@
 
 .collab-container {
     width: 400px;
+    max-height: 240px;
+    position: fixed;
+    top: 0;
+    overflow-y: hidden;
 }
 
 .collab-container .title {
@@ -293,15 +297,30 @@
 }
 
 .more {
+  top: 250px;
   width: 100px;
   color: black;
   margin-left: 320px;
   font-family: 'Sen', sans-serif;
   font-weight: bold;
+  position: absolute;
+}
+
+.no-collab {
+  top: 70px;
+  width: 400px;
+  color: gray;
+  font-family: 'Sen', sans-serif;
+  font-weight: bold;
+  position: absolute;
 }
 
 .follow-container {
     width: 400px;
+    max-height: 240px;
+    position: fixed;
+    top: 250px;
+    overflow-y: hidden;
 }
 
 .follow-container .title {
@@ -310,15 +329,38 @@
 }
 
 .FRmore {
+  top: 500px;
+  width: 100px;
   color: black;
+  margin-left: 320px;
+  font-family: 'Sen', sans-serif;
+  font-weight: bold;
+  position: absolute;
+}
+
+.no-follow {
+  top: 320px;
+  width: 400px;
+  color: gray;
+  font-family: 'Sen', sans-serif;
+  font-weight: bold;
+  position: absolute;
 }
 
 .recent-act-container {
     width: 400px;
-    margin-bottom: 80px;
+    height: 500px;
+    margin-bottom: 10px;
+    position: fixed;
+    top: 500px;
+    transition: top 0.3s ease;
 }
 
 .recent-act-container .title {
     color: black;
     font-family: 'Sen', sans-serif;
+}
+
+.hidden {
+  display: none;
 }
