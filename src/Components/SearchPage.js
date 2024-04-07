@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles/search.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faBell } from '@fortawesome/free-solid-svg-icons';
+import SearchBar from "./SearchBar";
 
 import { Grid } from '@mui/material';
 import SearchCard from './SearchCard';
@@ -23,12 +22,7 @@ function SearchPage() {
     <div className="search-container">
       <h1 className="search-header">Where to?</h1>
       <div className='search-bar'> 
-            <input 
-            type="text"
-            placeholder="Places, hotels, restaurants..."
-            className="text-input"
-            />
-            <FontAwesomeIcon icon={faSearch} color="grey" size="lg" style={{ marginLeft: '-30px', zIndex: '1' }} />
+            <SearchBar />
         </div>
       <div className='search-body'>
         <Grid container justify="center" 

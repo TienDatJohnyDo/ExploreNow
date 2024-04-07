@@ -4,7 +4,7 @@ import { Grid } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import './styles/postPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookmark, faHeart, faStar, faXmark, faCaretLeft, faCaretRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark, faHeart, faStar, faXmark, faCaretLeft, faCaretRight, faArrowLeft, faArrowCircleUp } from '@fortawesome/free-solid-svg-icons';
 
 import collabIcon from './images/collabIcon.png'
 
@@ -111,6 +111,7 @@ const CommentsPage = ({post}) => {
                     placeholder="Add a comment..."
                     className="comment-input"
                 />
+                <FontAwesomeIcon icon={faArrowCircleUp} className="enter-icon" color="#1D4061" size="lg" style={{ marginLeft: '-30px', zIndex: '1' }} />
             </div>
         </div>
     );

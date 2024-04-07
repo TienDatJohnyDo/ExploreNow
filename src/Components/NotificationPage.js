@@ -1,5 +1,5 @@
 // Discover.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid } from '@mui/material';
 import './styles/notificationPage.css';
 
@@ -10,9 +10,7 @@ import charlesPic from './images/charles.jpg'
 import sarahPic from './images/sarah.jpg'
 import zacPic from './images/zac.jpg'
 
-
-
-const CollabBox = ({pic, user, msg}) => {
+const CollabBox = ({pic, user, msg, onClick, boxKey}) => {
     return (
       <div className="box">
         <div className="column column-1">
@@ -25,16 +23,16 @@ const CollabBox = ({pic, user, msg}) => {
             </div>
         </div>
         <div className="column column-3">
-          <button className="button button-1">Decline</button>
+          <button className="button button-1" onClick={() => onClick(boxKey)}>Decline</button>
         </div>
         <div className="column column-4">
-          <button className="button button-2">Accept</button>
+          <button className="button button-2" onClick={() => onClick(boxKey)}>Accept</button>
         </div>
       </div>
     );
 };
 
-const FollowBox = ({pic, user}) => {
+const FollowBox = ({pic, user, onClick, boxKey}) => {
     return (
       <div className="Fbox">
         <div className="Fcolumn Fcolumn-1">
@@ -44,10 +42,10 @@ const FollowBox = ({pic, user}) => {
             <div className="Frow Frow-1" style={{ marginLeft: '-20px'}}>{user}</div>
         </div>
         <div className="Fcolumn Fcolumn-3">
-          <button className="Fbutton Fbutton-1">Decline</button>
+          <button className="Fbutton Fbutton-1" onClick={() => onClick(boxKey)}>Decline</button>
         </div>
         <div className="Fcolumn Fcolumn-4">
-          <button className="Fbutton Fbutton-2">Accept</button>
+          <button className="Fbutton Fbutton-2" onClick={() => onClick(boxKey)}>Accept</button>
         </div>
       </div>
     );
@@ -75,7 +73,7 @@ const RecentActivityGrid = () => {
           spacing={1} 
           direction="row"
           marginBlockStart="20px"
-          style={{ maxHeight: '170px',
+          style={{ maxHeight: '200px',
                   overflow: 'auto'}}>
       <Grid item><RecentActivity key={1} pic={charlesPic} user={"Charles"} msg={"Created a new post."}/></Grid>
       <Grid item><RecentActivity key={2} pic={jamesPic} user={"James"} msg={"Liked your post."}/></Grid>
@@ -86,24 +84,66 @@ const RecentActivityGrid = () => {
 
 function NotifcationPage() {
 
+  const [followBoxes, setFollowBoxes] = useState([
+    <FollowBox key={1} pic={sarahPic} user={"Sarah"} />,
+    <FollowBox key={2} pic={zacPic} user={"Zac"} />,
+    <FollowBox key={3} pic={zacPic} user={"Emily"} />,
+    // Add more FollowBox components here
+  ]);
+ 
+  const [collabBoxes, setCollabBoxes] = useState([
+    <CollabBox key={1} pic={laurenPic} user={"User 1"} msg={"Jasper Trip"} />,
+    <CollabBox key={2} pic={laurenPic} user={"User 2"} msg={"Banff Trip"} />,
+    <CollabBox key={3} pic={laurenPic} user={"User 2"} msg={"Banff Trip"} />
+    // Add more FollowBox components here
+  ]);
+
+  const handleFollowClick = (key) => {
+    setFollowBoxes((prevBoxes) => prevBoxes.filter((box) => box.key!== key));
+  };
+
+  const handleCollabClick = (key) => {
+    setCollabBoxes((prevBoxes) => prevBoxes.filter((box) => box.key!== key));
+  };
+
   return (
     <div className="discover-container">
       <div className='collab-container'>
         <h1 className="title">Collab Requests</h1>
         <div className='box1'>
-            <CollabBox pic={laurenPic} user={"User 1"} msg={"Jasper Trip"} />
-            <CollabBox pic={laurenPic} user={"User 2"} msg={"Banff Trip"} />
+            {/* <CollabBox pic={laurenPic} user={"User 1"} msg={"Jasper Trip"} />
+            <CollabBox pic={laurenPic} user={"User 2"} msg={"Banff Trip"} /> */}
+            {collabBoxes.map((box) => (
+            <CollabBox
+              key={box.key}
+              pic={box.props.pic}
+              user={box.props.user}
+              onClick={handleCollabClick}
+              boxKey={box.key}
+            />
+          ))}
         </div>
-        <div className="more">More (2)</div>
       </div>
+      {collabBoxes.length > 2 && <div className="more">More ({collabBoxes.length-2})</div>}
+      {collabBoxes.length == 0 && <div className="no-collab">You have no collab requests.</div>}
       <div className='follow-container'>
         <h1 className="title">Follow Requests</h1>
         <div className='box1'>
-            <FollowBox pic={sarahPic} user={"Sarah"} />
-            <FollowBox pic={zacPic} user={"Zac"} />
+            {/* <FollowBox pic={sarahPic} user={"Sarah"} />
+            <FollowBox pic={zacPic} user={"Zac"} /> */}
+            {followBoxes.map((box) => (
+            <FollowBox
+              key={box.key}
+              pic={box.props.pic}
+              user={box.props.user}
+              onClick={handleFollowClick}
+              boxKey={box.key}
+            />
+          ))}
         </div>
-        <div className="more">More (10)</div>
       </div>
+      {followBoxes.length > 2 && <div className="FRmore">More ({followBoxes.length-2})</div>}
+      {followBoxes.length == 0 && <div className="no-follow">You have no follow requests.</div>}
       <div className='recent-act-container'>
         <h1 className="title">Recent Activity</h1>
         <RecentActivityGrid />
