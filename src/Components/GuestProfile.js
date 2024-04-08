@@ -11,7 +11,7 @@ function GuestProfile() {
   return (
     
     <div className="discover-container">
-        <h1 className="discover-label">Post </h1>
+        <h1 className="discover-label">Profile </h1>
       <div className="image-container" style={{ textAlign: 'center' }}> {/* Apply text-align: center */}
         <img src={PleaseImage} alt="Please Login" className="image" style={{ width: '300px', height: '200px' }} />
       </div>
