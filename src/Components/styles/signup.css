@@ -93,13 +93,17 @@
     cursor: pointer; /* Make it look clickable */
   }
   .checkbox-container {
-    margin-bottom: 10px; /* Adjust spacing between the checkbox container and the input field */
+    text-align: left; /* Align the text inside the container to the left */
+    margin: 0 auto; /* Center the container horizontally */
+    width: fit-content; /* Set the width of the container to fit its content */
   }
   
   .checkbox-container input[type="checkbox"] {
     margin-right: 5px; /* Adjust spacing between the checkboxes */
     width: 20px; /* Set a fixed width for checkboxes */
+
   }
+ 
   
   .checkbox-container label {
     margin-bottom: 0; /* Remove default margin */
