@@ -1,90 +1,117 @@
-.discover-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 96vh;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Playfair Display', serif;
-    color: black;
-  }
-  
-  .location-text {
-    margin-bottom: 10px;
-    font-family: 'Playfair Display', serif;
-    position: relative; /* Ensure relative positioning */
-    z-index: 2; /* Set a higher z-index to ensure it's displayed above other elements */
-  }
-  
-  .location-text p {
-    font-size: 16px;
-    font-family: 'Playfair Display', serif;
-    margin: 0;
-    color: black;
-  }
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 91%;
+  height: 200px;
+  background-color: #D2F6FE;
+  color: black;
+  font-size: 24px;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
-  .next-button-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .text-input-container {
-    margin-bottom: 30px; /* Add margin at the bottom */
-    align-items: center;
-  }
-  
-  .next-button {
-    font-family: 'Playfair Display', serif;
-    background-color: white; 
-    border: 2px solid black;
-    color:#1d4061;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
-    
-  }
-  .text-input-container {
-    display: flex; /* Use flexbox to center the select element */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-  }
-  
-  .text-input-container select {
-    width: 371px; /* Set the width of the dropdown menu */
-    height: 40px; /* Set the height of the dropdown menu */
-    padding: 10px; /* Add padding for spacing */
-    border-radius: 10px; /* Add border radius for rounded corners */
-    border: 1px solid black; /* Add border for visual separation */
-    font-size: 16px; /* Adjust font size */
-    
-  }
-  .text-input-container {
-    position: relative; /* Ensure relative positioning */
-  }
-  
-  .text-input {
-    width: calc(100% - 40px); /* Adjust width to accommodate the icon */
-    padding: 10px; /* Add padding for spacing */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    border: 1px solid #ccc; /* Add border for visual separation */
-    font-size: 16px; /* Adjust font size */
-  }
-  
-  .search-icon {
-    position: absolute; /* Position the icon absolutely */
-    right: 10px; /* Adjust the right position as needed */
-    top: 30%; /* Center vertically */
-    transform: translateY(-50%); /* Center vertically */
-  }
-  .collaborator-name {
-    color: black; /* Set text color to black */
-    padding: 70px;
-    font-weight: bold;
-  }
+.banner-content {
+  position: absolute; /* Position the content relative to the banner */
+  bottom: 20px; /* Add spacing from the bottom */
+  left: 20px; /* Add spacing from the left */
+}
+.discover-container {
+  margin-top: 60px; /* Add margin to the top of the discover container to make space for the banner */
+  width: 400px;
+  height: 96vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Playfair Display', serif;
+  color: black;
+}
+.location-text {
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  position: relative; /* Ensure relative positioning */
+  z-index: 2; /* Set a higher z-index to ensure it's displayed above other elements */
+}
+
+.location-text p {
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  color: black;
+}
+
+.next-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.text-input-container {
+  margin-bottom: 30px; /* Add margin at the bottom */
+  align-items: center;
+}
+
+.next-button {
+  font-family: 'Playfair Display', serif;
+  background-color: white; 
+  border: 2px solid black;
+  color: #1d4061;
+  padding: 13px 32px; /* Adjusted padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px auto; /* Center the button horizontally by setting margin-left and margin-right to auto */
+  cursor: pointer;
+  border-radius: 8px;
+  box-sizing: border-box; /* Ensure padding is included in the width and height */
+  width: auto; /* Set width to auto to fit the content */
+  line-height: 0.5; /* Adjust line-height to center the text vertically
+}
+
+.text-input-container {
+  display: flex; /* Use flexbox to center the select element */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.text-input-container select {
+  width: 371px; /* Set the width of the dropdown menu */
+  height: 40px; /* Set the height of the dropdown menu */
+  padding: 10px; /* Add padding for spacing */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  border: 1px solid black; /* Add border for visual separation */
+  font-size: 16px; /* Adjust font size */
+}
+
+.text-input-container {
+  position: relative; /* Ensure relative positioning */
+}
+
+.text-input {
+  width: calc(100% - 40px); /* Adjust width to accommodate the icon */
+  padding: 10px; /* Add padding for spacing */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  border: 1px solid #ccc; /* Add border for visual separation */
+  font-size: 16px; /* Adjust font size */
+}
+
+.search-icon {
+  position: absolute; /* Position the icon absolutely */
+  right: 10px; /* Adjust the right position as needed */
+  top: 30%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
+}
+
+.collaborator-name {
+  color: black; /* Set text color to black */
+  padding: 70px;
+  font-weight: bold;
+}

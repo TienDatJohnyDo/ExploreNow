@@ -20,10 +20,16 @@ function Post() {
     setSelectedCollaborator("");
   };
 
-
   return (
     <div className="discover-container">
-      <h1 className="discover-label">POST</h1>
+      <div class="banner">
+        <div class="banner-content">
+          <span>Hey Lauren ! <br></br></span>
+          <span>Share your journey</span>
+        </div>
+      </div>
+
+    
 
       <div className="location-text">
         <p>Where did you go?</p>
@@ -45,11 +51,10 @@ function Post() {
       <div className="text-input-container">
         <select className="text-input" value={selectedCollaborator} onChange={handleCollaboratorChange}>
           <option value="">Select Collaborators</option>
-          <option value="Nathan Nguyen">Nathan Nguyen</option>
-          <option value="David Bruce">David Bruce</option>
-          <option value="Stephen Boyer">Stephen Boyer</option>
-          <option value="Lauren Cromwell">Lauren Cromwell</option>
-          <option value="Alone">Alone</option>
+          <option value="James">James</option>
+          <option value="David ">David </option>
+          <option value="Stephen">Stephen </option>
+          <option value="Alone">Alone </option>
           {/* Add more options as needed */}
         </select>
       </div>
@@ -69,7 +74,6 @@ function Post() {
           <button className="next-button">Next</button>
         </div>
       </Link>
-      
     </div>
   );
 }
