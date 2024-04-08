@@ -24,7 +24,7 @@ function Post() {
     <div className="discover-container">
       <div class="banner">
         <div class="banner-content">
-          <span>Hey Lauren ! <br></br></span>
+          <span>Hey Lauren! <br></br></span>
           <span>Share your journey</span>
         </div>
       </div>
