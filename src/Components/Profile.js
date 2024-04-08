@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Grid } from '@mui/material';
 import './styles/profile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,9 +8,11 @@ import laurenPic from './images/lauren.jpg'
 import jasper from './images/jasper.jpg'
 import banff from './images/banff1.jpg'
 import lakeLouise from './images/lakeLouise.jpg'
+import SignOutModal from './SignOutModal';
 
 
 const MyComponent = () => {
+
 
   const post1 = {
     profilePic: laurenPic,
@@ -62,9 +64,18 @@ const MyComponent = () => {
 
 
 function Profile() {
+  const [isSignOutModalOpen, setIsSignOutModalOpen] = useState(false);
+
+  const handleOpenSignOutModal = () => {
+    setIsSignOutModalOpen(true);
+  };
+
+  const handleCloseSignOutModal = () => {
+    setIsSignOutModalOpen(false);
+  };
   return (
     <div className="discover-container">
-      <FontAwesomeIcon icon={faEllipsisV} className="more-icon" />
+      <FontAwesomeIcon icon={faEllipsisV} className="more-icon" onClick={handleOpenSignOutModal} />
       <div className="profile-info">
         <div className="profile-picture-container">
           <img className="profile-picture" alt="profilePic" src={laurenPic} />
@@ -96,7 +107,7 @@ function Profile() {
       </div>
 
       <br></br>
-      
+      <SignOutModal isOpen={isSignOutModalOpen} onClose={handleCloseSignOutModal} />
     </div>
   );
 }
