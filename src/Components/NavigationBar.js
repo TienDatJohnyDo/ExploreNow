@@ -48,6 +48,7 @@ function NavigationBar() {
                 <Link to="/profile" className='nav-button' onClick={() => handleClick('/profile')}>
                     <FontAwesomeIcon icon={faUser} color="white" size="lg" style={activeTab === '/profile' ? activeTabStyle : inactiveTabStyle} />
                 </Link>
+                
             </div>
         </div>
     );
