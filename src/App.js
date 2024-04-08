@@ -108,6 +108,7 @@ import NotifcationPage from './Components/NotificationPage';
 import PostTwo from './Components/PostTwo';
 import PostThree from './Components/PostThree';
 import SignOutModal from './Components/SignOutModal';
+import Profile2  from './Components/Profile2';
 
 /* Profile pages imports here */
 import Profile from './Components/Profile'; 
@@ -194,6 +195,7 @@ function App() {
         <Route path="/tokyo" element={<Tokyo />} />
         <Route path="/postTwo" element={<PostTwo />}></Route>
         <Route path="/postThree" element={<PostThree />}></Route>
+        <Route path ="/Profile2" element = {<Profile2/>}></Route>
         
 
         {/* Define routes for other components as needed */}

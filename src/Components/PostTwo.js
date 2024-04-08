@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './styles/postTwo.css'; // Import your CSS file
-import postImage from './images/jasper.jpg'; // Import your image
+import postImage from './images/paris2.jpg'; // Import your image
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'; // Import the back arrow icon
 

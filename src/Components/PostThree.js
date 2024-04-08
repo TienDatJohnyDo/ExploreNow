@@ -63,8 +63,8 @@ function PostThree() {
                     </span>
                 ))}
             </div>
-
-            <Link to="/discover" onClick={() => handleNext('/discover')}>
+                        
+            <Link to="/Profile2" onClick={() => handleNext('/discover')}>
                 <div className="next-button-container">
                     <button className="next-button">Post</button>
                 </div>
