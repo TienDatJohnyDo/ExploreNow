@@ -43,7 +43,7 @@ function SearchPage() {
         </Grid>
 
       </div>
-      <h1 className="yml-header">You Might Live</h1>
+      <h1 className="yml-header">You Might Like</h1>
       <div>
       <Grid container justify="center" 
           spacing={3} 
