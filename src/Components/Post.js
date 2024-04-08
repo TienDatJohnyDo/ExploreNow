@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './styles/post.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faUser, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 function Post() {
   const [selectedCollaborator, setSelectedCollaborator] = useState('');
+  const [activeTab, setActiveTab] = useState('/post');
+
+  const handleNext = (tab) => {
+    setActiveTab(tab);
+  }
 
   const handleCollaboratorChange = (event) => {
     setSelectedCollaborator(event.target.value);
   };
+
+  const handleCollaboratorRemove = () => {
+    setSelectedCollaborator("");
+  };
+
 
   return (
     <div className="discover-container">
@@ -37,6 +48,7 @@ function Post() {
           <option value="Nathan Nguyen">Nathan Nguyen</option>
           <option value="David Bruce">David Bruce</option>
           <option value="Stephen Boyer">Stephen Boyer</option>
+          <option value="Lauren Cromwell">Lauren Cromwell</option>
           <option value="Alone">Alone</option>
           {/* Add more options as needed */}
         </select>
@@ -47,14 +59,17 @@ function Post() {
           <div className="selected-collaborator">
             <FontAwesomeIcon icon={faUser} color="black" size="lg" className="profile-icon" />
             <span className="collaborator-name">{selectedCollaborator}</span>
-            <FontAwesomeIcon icon={faMinus} color="black" size="lg" className="remove-icon" />
+            <FontAwesomeIcon icon={faMinus} color="black" size="lg" className="remove-icon" onClick={handleCollaboratorRemove} />
           </div>
         )}
       </div>
-
-      <div className="next-button-container">
-        <button className="next-button">Next</button>
-      </div>
+      
+      <Link to="/postTwo" onClick={() => handleNext('/postTwo')}>
+        <div className="next-button-container">
+          <button className="next-button">Next</button>
+        </div>
+      </Link>
+      
     </div>
   );
 }

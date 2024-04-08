@@ -105,6 +105,8 @@ import NavigationBar from './Components/NavigationBar';
 import Guestnavigation from './Components/Guestnavigation';
 import EntryPage from './Components/EntryPage';
 import NotifcationPage from './Components/NotificationPage';
+import PostTwo from './Components/PostTwo';
+import PostThree from './Components/PostThree';
 
 /* Profile pages imports here */
 import Profile from './Components/Profile'; 
@@ -188,6 +190,8 @@ function App() {
         <Route path="/paris" element={<Paris />} />
         <Route path="/santorini" element={<Santorini />} />
         <Route path="/tokyo" element={<Tokyo />} />
+        <Route path="/postTwo" element={<PostTwo />}></Route>
+        <Route path="/postThree" element={<PostThree />}></Route>
 
         {/* Define routes for other components as needed */}
       </Routes>
