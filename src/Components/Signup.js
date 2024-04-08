@@ -75,29 +75,7 @@ function SignUp() {
       />
       {/* Display password match status */}
       {confirmPassword && !passwordsMatch && <p>Passwords do not match</p>}
-      <p className="dob-label">Date of Birth:</p>
-      <div className="dob-container">
-        <input 
-          type="text" 
-          name="dobYear"
-          placeholder="YYYY" 
-          className="text-input dob-input"
-        />
-        <span className="dob-separator">/</span>
-        <input 
-          type="text" 
-          name="dobMonth"
-          placeholder="MM" 
-          className="text-input dob-input"
-        />
-        <span className="dob-separator">/</span>
-        <input 
-          type="text" 
-          name="dobDay"
-          placeholder="DD" 
-          className="text-input dob-input"
-        />
-      </div>
+      
       <div className="button-container"> 
         <Link to = "/discover">
             <button>Sign up</button>
