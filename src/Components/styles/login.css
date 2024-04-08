@@ -76,3 +76,13 @@ a {
 .login-label {
     text-align: left;
 }
+.error-container {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  height: 50px; /* Adjust the height as needed */
+}
+
+.error-message {
+  color: red;
+}

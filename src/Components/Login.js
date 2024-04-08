@@ -17,6 +17,8 @@ function Login() {
         } else if (e.target.name === 'password') {
             setPassword(e.target.value);
         }
+        // Clear error message when the user starts typing
+        setError('');
     };
 
     const handleSubmit = (e) => {
@@ -62,7 +64,13 @@ function Login() {
                     value={password} 
                     onChange={handleChange} 
                 />
-                {error && <p style={{ color: 'red' }}>{error}</p>}
+                
+                {error && (
+                    <div className="error-container">
+                        <p className="error-message">{error}</p>
+                    </div>
+                )}
+                
                 <div className="button-container"> 
                     <button type="submit">Login</button>
                 </div>
