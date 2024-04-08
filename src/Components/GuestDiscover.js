@@ -1,15 +1,25 @@
-// Guestaccess.js
+// Discover.js
 import React from 'react';
 import { Grid } from '@mui/material';
-import './styles/search.css';
+import {Link} from 'react-router-dom';
+import './styles/discover.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faUser, faSearch, faHome, faBell } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom'; // Importing Routes and Route instead of BrowserRouter as Router
+import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 import Postcard from './Postcard';
 
 import laurenPic from './images/lauren.jpg'
-import postImage from './images/jasper.jpg'
+import charlesPic from './images/charles.jpg'
+import lisaPic from './images/Lisa.jpg'
+import nancyPic from './images/nancy.jpg'
+import danielPic from './images/daniel.jpg'
+
+
+import banff1 from './images/banff1.jpg'
+import jasper from './images/jasper.jpg'
+import santorini from './images/santorini.jpg'
+import toronto from './images/toronto.jpg'
+import paris from './images/paris.jpg'
 
 const MyComponent = () => {
   // Define your components' array
@@ -20,46 +30,56 @@ const MyComponent = () => {
   const post1 = {
     profilePic: laurenPic,
     username: "Lauren",
-    image: postImage,
+    image: banff1,
     location: "Banff",
-    heartCount: "1.2 k",
-    commentCount: 600,
+    heartCount: "92",
+    commentCount: 7,
+    link: "/laurenPost",
+    profileLink: "/profile",
   };
 
   const post2 = {
-    profilePic: laurenPic,
-    username: "User 2",
-    image: postImage,
-    location: "Banff",
-    heartCount: "1.2 k",
-    commentCount: 600,
+    profilePic: charlesPic,
+    username: "Charles",
+    image: jasper,
+    location: "Jasper",
+    heartCount: "374",
+    commentCount: 55,
+    link: "/charlesPost",
+    profileLink: "/charlesProfile",
   };
 
   const post3 = {
-    profilePic: laurenPic,
-    username: "User 3",
-    image: postImage,
-    location: "Banff",
-    heartCount: "1.2 k",
-    commentCount: 600,
+    profilePic: lisaPic,
+    username: "Lisa",
+    image: santorini,
+    location: "Santorini",
+    heartCount: "1,302",
+    commentCount: 422,
+    link: "/lisaPost",
+    profileLink: "/lisaProfile",
   };
 
   const post4 = {
-    profilePic: laurenPic,
-    username: "User 4",
-    image: postImage,
-    location: "Banff",
-    heartCount: "1.2 k",
-    commentCount: 600,
+    profilePic: nancyPic,
+    username: "Nancy",
+    image: toronto,
+    location: "Toronto",
+    heartCount: "600",
+    commentCount: 123,
+    link: "/nancyPost",
+    profileLink: "/nancyProfile",
   };
 
   const post5 = {
-    profilePic: laurenPic,
-    username: "User 5",
-    image: postImage,
-    location: "Banff",
-    heartCount: "1.2 k",
-    commentCount: 600,
+    profilePic: danielPic,
+    username: "Daniel",
+    image: paris,
+    location: "Paris",
+    heartCount: "403",
+    commentCount: 192,
+    link: "/danielPost",
+    profileLink: "/danielProfile",
   };
 
   return (
@@ -81,18 +101,18 @@ const MyComponent = () => {
   );
 };
 
-function GuestDiscover() {
+function Discover() {
   return (
-    
     <div className="discover-container">
-      <h1 className="discover-label">Discover (guest)</h1>
-      <FontAwesomeIcon icon={faBell} className="notification-icon" />
+      <h1 className="discover-label">Discover</h1>
+      <Link to="/notificationPage" className='noti-button'>
+        <FontAwesomeIcon icon={faBell} className="notification-icon" size='lg' />
+      </Link>
       <div className='posts-container'>
         <MyComponent />
       </div>
     </div>
-    
   );
 }
 
-export default GuestDiscover;
+export default Discover;
