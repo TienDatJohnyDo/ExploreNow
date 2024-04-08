@@ -92,3 +92,21 @@
     left: 20px;
     cursor: pointer; /* Make it look clickable */
   }
+  .checkbox-container {
+    margin-bottom: 10px; /* Adjust spacing between the checkbox container and the input field */
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    margin-right: 5px; /* Adjust spacing between the checkboxes */
+    width: 20px; /* Set a fixed width for checkboxes */
+  }
+  
+  .checkbox-container label {
+    margin-bottom: 0; /* Remove default margin */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .checkbox-container label span {
+    margin-left: 5px; /* Adjust spacing between the checkbox and the label */
+  }
