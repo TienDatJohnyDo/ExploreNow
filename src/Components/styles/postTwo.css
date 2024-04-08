@@ -1,3 +1,26 @@
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 91%;
+  height: 200px;
+  background-color: #D2F6FE;
+  color: black;
+  font-size: 24px;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.banner-content {
+  position: absolute; /* Position the content relative to the banner */
+  bottom: 20px; /* Add spacing from the bottom */
+  left: 20px; /* Add spacing from the left */
+}
+
 .discover-container {
     position: fixed;
     top: 50%;
@@ -13,9 +36,10 @@
   }
   
   .test{
-    position: fixed;
-    font-size: 32px;
+    
+    font-size: 24px;
     top: 200px;
+    color: black ;
   }
 
   .next-button-container {
