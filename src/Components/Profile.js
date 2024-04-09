@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Grid } from '@mui/material';
+import { Grid, Menu, MenuItem, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material';
 import './styles/profile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'; // Importing the "more" icon
@@ -64,18 +64,58 @@ const MyComponent = () => {
 
 
 function Profile() {
-  const [isSignOutModalOpen, setIsSignOutModalOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null); // State for anchor element of the menu
+  const [openDialog, setOpenDialog] = useState(false); // State for dialog open/close
 
-  const handleOpenSignOutModal = () => {
-    setIsSignOutModalOpen(true);
+  // Open menu
+  const handleMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
   };
 
-  const handleCloseSignOutModal = () => {
-    setIsSignOutModalOpen(false);
+  // Close menu
+  const handleMenuClose = () => {
+    setAnchorEl(null);
   };
+
+  // Open dialog
+  const handleOpenDialog = () => {
+    setOpenDialog(true);
+    handleMenuClose(); // Close menu when dialog opens
+  };
+
+  // Close dialog
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+  };
+
+  // Logout function
+  const handleSignOut = () => {
+    // Perform sign-out here
+    localStorage.removeItem('userData');
+    // Redirect the user to the sign-in page
+    window.location.href = '/login';
+  };
+
+  // View saved posts function
+  const handleViewSavedPosts = () => {
+    console.log("View saved posts");
+    window.location.href = '/savedPost';
+  };
+
   return (
     <div className="discover-container">
-      <FontAwesomeIcon icon={faEllipsisV} className="more-icon" onClick={handleOpenSignOutModal} />
+      <div className="profile-actions">
+        <FontAwesomeIcon icon={faEllipsisV} className="more-icon" onClick={handleMenuOpen} />
+        {/* Dropdown menu */}
+        <Menu
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={handleMenuClose}
+        >
+          <MenuItem onClick={handleViewSavedPosts}>View Saved Posts</MenuItem>
+          <MenuItem onClick={handleOpenDialog}>Log out</MenuItem>
+        </Menu>
+      </div>
       <div className="profile-info">
         <div className="profile-picture-container">
           <img className="profile-picture" alt="profilePic" src={laurenPic} />
@@ -106,8 +146,20 @@ function Profile() {
         <MyComponent />
       </div>
 
+      {/* Confirmation dialog */}
+      <Dialog open={openDialog} onClose={handleCloseDialog}>
+        <DialogTitle>Logout</DialogTitle>
+        <DialogContent>
+          <p>Are you sure you want to log out?</p>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDialog}>Cancel</Button>
+          <Button onClick={handleSignOut}>Logout</Button>
+        </DialogActions>
+      </Dialog>
+
       <br></br>
-      <SignOutModal isOpen={isSignOutModalOpen} onClose={handleCloseSignOutModal} />
+      
     </div>
   );
 }
