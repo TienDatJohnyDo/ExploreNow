@@ -20,8 +20,8 @@ Click this [link](https://explorenow-nine.vercel.app/) to run the deployed app
   Install react\
   `npm install react`
   
-  Install react-router-dom\
-  `npm install react-router-dom`
+  Install required dependencies\
+  `npm install`
   
   Run the app in the development mode.\
   `npm start`
