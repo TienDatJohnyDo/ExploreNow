@@ -31,8 +31,6 @@ function Santorini() {
       location: "Oia",
       heartCount: "92",
       commentCount: 7,
-      link: "/laurenPost",
-      profileLink: "/profile",
     },
     {
       profilePic: caitlin,
@@ -41,8 +39,6 @@ function Santorini() {
       location: "Red Beach",
       heartCount: "374",
       commentCount: 55,
-      link: "/charlesPost",
-      profileLink: "/charlesProfile",
     },
     {
       profilePic: gianna,
@@ -51,8 +47,6 @@ function Santorini() {
       location: "Ammoudi Bay",
       heartCount: "1,302",
       commentCount: 422,
-      link: "/lisaPost",
-      profileLink: "/lisaProfile",
     },
     {
       profilePic: luz,
@@ -61,8 +55,6 @@ function Santorini() {
       location: "The Caldera",
       heartCount: "600",
       commentCount: 123,
-      link: "/nancyPost",
-      profileLink: "/nancyProfile",
     },
     {
       profilePic: messiah,
@@ -71,8 +63,6 @@ function Santorini() {
       location: "Santo Wines",
       heartCount: "403",
       commentCount: 192,
-      link: "/danielPost",
-      profileLink: "/danielProfile",
     },
   ];
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './styles/postTwo.css'; // Import your CSS file
 import postImage from './images/paris2.jpg'; // Import your image
+import postImage2 from './images/paris.jpg'; // Import your image
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'; // Import the back arrow icon
 
@@ -9,10 +10,13 @@ function PostTwo() {
   const [selectedImages, setSelectedImages] = useState([]);
   const [activeTab, setActiveTab] = useState('/postTwo');
   const MAX_IMAGES = 3;
+  const images = [postImage, postImage2];
+  var [counter, setCounter] = useState(0);
 
   const handleAddImage = () => {
     if (selectedImages.length < MAX_IMAGES) {
-      setSelectedImages([...selectedImages, postImage]); // Update with spread syntax
+      setSelectedImages([...selectedImages, images[counter]]); // Update with spread syntax
+      setCounter((prevCounter) => prevCounter + 1);
     }
   };
 
@@ -24,8 +28,8 @@ function PostTwo() {
     <div className="discover-container">
       <div className="banner">
         <div className="banner-content">
-          <span>Hey Lauren! <br></br></span>
-          <span>Share your journey</span>
+          <span className='heyLauren'>Hey Lauren! <br /></span>
+          <span className='shareJourney'>Share your journey</span>
         </div>
       </div>
 

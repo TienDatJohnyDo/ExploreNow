@@ -33,8 +33,6 @@ function Banff() {
       location: "Moraine Lake",
       heartCount: "92",
       commentCount: 7,
-      link: "/laurenPost",
-      profileLink: "/profile",
     },
     {
       profilePic: amira,
@@ -43,8 +41,6 @@ function Banff() {
       location: "Little Beehive Hike",
       heartCount: "374",
       commentCount: 55,
-      link: "/charlesPost",
-      profileLink: "/charlesProfile",
     },
     {
       profilePic: cullen,
@@ -53,8 +49,6 @@ function Banff() {
       location: "Bow Lake",
       heartCount: "1,302",
       commentCount: 422,
-      link: "/lisaPost",
-      profileLink: "/lisaProfile",
     },
     {
       profilePic: maggie,
@@ -63,8 +57,6 @@ function Banff() {
       location: "Athabasca Glacier",
       heartCount: "600",
       commentCount: 123,
-      link: "/nancyPost",
-      profileLink: "/nancyProfile",
     },
     {
       profilePic: kelvin,
@@ -73,8 +65,6 @@ function Banff() {
       location: "Upper Hot Springs",
       heartCount: "403",
       commentCount: 192,
-      link: "/danielPost",
-      profileLink: "/danielProfile",
     },
   ];
 

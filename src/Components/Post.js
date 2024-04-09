@@ -110,13 +110,13 @@ function Post() {
     <div className="discover-container">
       <div className="banner">
         <div className="banner-content">
-          <span>Hey Lauren! <br /></span>
-          <span>Share your journey</span>
+          <span className='heyLauren'>Hey Lauren! <br /></span>
+          <span className='shareJourney'>Share your journey</span>
         </div>
       </div>
 
       <div className="location-text">
-        <p>Where did you go?</p>
+        <span>Where did you go?</span>
       </div>
 
       {/* Replace the input with the SearchBar component */}
@@ -124,7 +124,7 @@ function Post() {
       <br />
       <br />
 
-      <div className="location-text">
+      <div className="who-with-text">
         <p>Who did you go with?</p>
       </div>
 
@@ -153,7 +153,7 @@ function Post() {
             
             <span className="collaborator-name">{collaborator}</span>
             
-            <FontAwesomeIcon icon={faMinus} color="black" size="lg" className="remove-icon" onClick={() => handleCollaboratorRemove(collaborator)} />
+            <FontAwesomeIcon icon={faMinus} color="red" size="lg" className="remove-icon" onClick={() => handleCollaboratorRemove(collaborator)} />
             <br></br>
             
           </div>

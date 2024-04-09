@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './styles/postTwo.css'; // Import your CSS file
 import postImage from './images/paris2.jpg'; // Import your image
-import postImage2 from './images/paris3.jpg'; // Import your image
+import postImage2 from './images/paris.jpg'; // Import your image
+import addedImage from './images/paris3.jpg'; // Import your image
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'; // Import the back arrow icon
 
 function PostTwo() {
-  const [selectedImages, setSelectedImages] = useState([postImage]); // Prepopulate with postImage
+  const [selectedImages, setSelectedImages] = useState([postImage, postImage2]); // Prepopulate with postImage
   const [activeTab, setActiveTab] = useState('/postTwo');
   const MAX_IMAGES = 3;
 
@@ -16,8 +17,9 @@ function PostTwo() {
   }, []); // Empty dependency array to run once on mount
 
   const handleAddImage = () => {
-    const newImage = selectedImages.length < MAX_IMAGES ? postImage2 : './images/paris3.jpg';
-    setSelectedImages([...selectedImages, newImage]);
+    if (selectedImages.length < MAX_IMAGES) {
+      setSelectedImages([...selectedImages, addedImage]);
+    }
   };
 
   const handleNext = (tab) => {

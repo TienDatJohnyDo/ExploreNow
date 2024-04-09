@@ -1,8 +1,23 @@
+
+.discover-container {
+  width: 400px;
+  height: 96vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Playfair Display', serif;
+  color: black;
+}
+
 .banner {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 91%;
+  left: 30px;
+  width: 400px;
   height: 200px;
   background-color: #D2F6FE;
   color: black;
@@ -18,39 +33,51 @@
 .banner-content {
   position: absolute; /* Position the content relative to the banner */
   bottom: 20px; /* Add spacing from the bottom */
-  left: 20px; /* Add spacing from the left */
-}
-.discover-container {
-  margin-top: 60px; /* Add margin to the top of the discover container to make space for the banner */
-  width: 400px;
-  height: 96vh;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Playfair Display', serif;
-  color: black;
-}
-.location-text {
-  margin-bottom: 10px;
-  font-family: 'Playfair Display', serif;
-  position: relative; /* Ensure relative positioning */
-  z-index: 2; /* Set a higher z-index to ensure it's displayed above other elements */
+  font-family: 'Sansation', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-.location-text p {
-  font-size: 16px;
-  font-family: 'Playfair Display', serif;
-  margin: 0;
+.heyLauren {
+  font-size: 25px;
+}
+
+.shareJourney {
+  font-size: 30px;
+}
+
+.location-text {
+  margin-bottom: 10px;
+  left: 10px;
+  width: 400px;
+  position: relative; /* Ensure relative positioning */
+  z-index: 2; /* Set a higher z-index to ensure it's displayed above other elements */
+  font-family: 'Sansation', sans-serif;
+  align-items: left;
+  font-weight: bold;
   color: black;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.who-with-text{
+  left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 400px;
+  position: relative; /* Ensure relative positioning */
+  z-index: 2; /* Set a higher z-index to ensure it's displayed above other elements */
+  font-family: 'Sansation', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  align-items: left;
+  color: black;
+  letter-spacing: 1px;
 }
 
 .next-button-container {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .text-input-container {
@@ -74,6 +101,7 @@
   box-sizing: border-box; /* Ensure padding is included in the width and height */
   width: auto; /* Set width to auto to fit the content */
   line-height: 0.5; /* Adjust line-height to center the text vertically
+  
 }
 
 .text-input-container {
@@ -138,9 +166,10 @@
   border: 1px;
 }
 .dropdown {
+  margin-top: -15px;
+  margin-bottom: 15px;
   position: relative;
   display: inline-block;
-  
 }
 
 .text-input {
@@ -152,6 +181,7 @@
   cursor: pointer;
   width: 250px; /* Set the width of the dropdown */
   color: #ccc;
+  height: 40px;
 }
 
 .dropdown-content {

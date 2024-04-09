@@ -1,0 +1,57 @@
+.discover-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 400px;
+    height: 96vh;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
+
+.sp-discover-label {
+    position: absolute;
+    top: 7px; /* Adjust the top position to move the label down */
+    left: 70px; /* Adjust the left position to move the label right */
+    font-size: 30px;
+    font-weight: bold;
+    color: black; /* Change the color to ensure visibility */
+    font-family: 'Sen', sans-serif;
+    color: #1D4061;
+}
+
+.sp-posts-container {
+    max-width: 400px;
+    height: 800px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.sp-discover-container {
+    position: relative; /* Ensure relative positioning */
+  }
+  
+  .sp-notification-icon {
+    position: absolute; /* Position the icon absolutely */
+    top: 40px; /* Adjust top position as needed */
+    right: 20px; /* Adjust right position as needed */
+  }
+
+  .sp-back-button {
+    left: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+.sp-top {
+    width: 400px;
+}

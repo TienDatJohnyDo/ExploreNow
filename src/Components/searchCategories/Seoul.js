@@ -31,7 +31,7 @@ function Seoul() {
       location: "Han River",
       heartCount: "92",
       commentCount: 7,
-      link: "/laurenPost",
+      link: "/daltonPost",
       profileLink: "/profile",
     },
     {
@@ -41,8 +41,6 @@ function Seoul() {
       location: "Myeongdong",
       heartCount: "374",
       commentCount: 55,
-      link: "/charlesPost",
-      profileLink: "/charlesProfile",
     },
     {
       profilePic: hayley,
@@ -51,8 +49,6 @@ function Seoul() {
       location: "Itaewon",
       heartCount: "1,302",
       commentCount: 422,
-      link: "/lisaPost",
-      profileLink: "/lisaProfile",
     },
     {
       profilePic: brody,
@@ -61,8 +57,6 @@ function Seoul() {
       location: "Hongdae",
       heartCount: "600",
       commentCount: 123,
-      link: "/nancyPost",
-      profileLink: "/nancyProfile",
     },
     {
       profilePic: yasmine,
@@ -71,8 +65,6 @@ function Seoul() {
       location: "Bukhansan",
       heartCount: "403",
       commentCount: 192,
-      link: "/danielPost",
-      profileLink: "/danielProfile",
     },
   ];
 

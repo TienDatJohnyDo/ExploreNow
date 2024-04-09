@@ -132,6 +132,8 @@ import CharlesPost from './Components/postPages/charlesPost';
 import LisaPost from './Components/postPages/lisaPost';
 import NancyPost from './Components/postPages/nancyPost';
 import DanielPost from './Components/postPages/danielPost';
+import LaurenParisPost from './Components/postPages/laurenParisPost';
+import DaltonPost from './Components/postPages/daltonPost';
 
 /* Seachpage categories imports here*/
 import Trending from './Components/searchCategories/Trending';
@@ -194,6 +196,8 @@ function App() {
         <Route path="/lisaPost" element={<LisaPost />} />
         <Route path="/nancyPost" element={<NancyPost />} />
         <Route path="/danielPost" element={<DanielPost />} />
+        <Route path="/laurenParisPost" element={<LaurenParisPost />} />
+        <Route path="/daltonPost" element={<DaltonPost />} />
 
         {/* Seachpage categories routes here */}
         <Route path="/trending" element={<Trending />} />

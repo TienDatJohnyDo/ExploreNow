@@ -32,8 +32,6 @@ function Food() {
       location: "Central Lima",
       heartCount: "92",
       commentCount: 7,
-      link: "/laurenPost",
-      profileLink: "/profile",
     },
     {
       profilePic: valeria,
@@ -42,8 +40,6 @@ function Food() {
       location: "Quintonil",
       heartCount: "374",
       commentCount: 55,
-      link: "/charlesPost",
-      profileLink: "/charlesProfile",
     },
     {
       profilePic: linda,
@@ -52,8 +48,6 @@ function Food() {
       location: "Le Du",
       heartCount: "1,302",
       commentCount: 422,
-      link: "/lisaPost",
-      profileLink: "/lisaProfile",
     },
     {
       profilePic: jamie,
@@ -62,8 +56,6 @@ function Food() {
       location: "Florilège",
       heartCount: "600",
       commentCount: 123,
-      link: "/nancyPost",
-      profileLink: "/nancyProfile",
     },
     {
       profilePic: beatrice,
@@ -72,8 +64,6 @@ function Food() {
       location: "Tim Raue",
       heartCount: "403",
       commentCount: 192,
-      link: "/danielPost",
-      profileLink: "/danielProfile",
     },
   ];
 

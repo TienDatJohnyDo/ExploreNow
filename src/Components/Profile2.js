@@ -15,13 +15,14 @@ import paris2 from './images/paris2.jpg'
 const MyComponent = () => {
 
   const post0 = {
-    profilePic: laurenPic,
-    username: "Lauren",
-    image: paris2,
-    location: "Paris",
-    heartCount: "0",
-    commentCount: 0,
-    notShowProfile: true,
+      profilePic: laurenPic,
+      username: "Lauren",
+      image: paris2,
+      location: "Paris",
+      heartCount: "0",
+      commentCount: 0,
+      notShowProfile: true,
+      link: "/laurenParisPost"
   };
 
   const post1 = {

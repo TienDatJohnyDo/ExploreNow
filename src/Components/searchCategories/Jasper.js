@@ -35,8 +35,6 @@ function Jasper() {
       location: "Columbia Icefield",
       heartCount: "374",
       commentCount: 55,
-      link: "/charlesPost",
-      profileLink: "/charlesProfile",
     },
     {
       profilePic: charlotte,
@@ -45,8 +43,6 @@ function Jasper() {
       location: "Maligne Lake",
       heartCount: "1,302",
       commentCount: 422,
-      link: "/lisaPost",
-      profileLink: "/lisaProfile",
     },
     {
       profilePic: audrina,
@@ -55,8 +51,6 @@ function Jasper() {
       location: "Athabasca Falls",
       heartCount: "600",
       commentCount: 123,
-      link: "/nancyPost",
-      profileLink: "/nancyProfile",
     },
     {
       profilePic: marshall,
@@ -65,8 +59,6 @@ function Jasper() {
       location: "Pyramid Lake",
       heartCount: "403",
       commentCount: 192,
-      link: "/danielPost",
-      profileLink: "/danielProfile",
     },
     {
       profilePic: conner,
@@ -75,8 +67,6 @@ function Jasper() {
       location: "Jasper SkyTram",
       heartCount: "403",
       commentCount: 192,
-      link: "/danielPost",
-      profileLink: "/danielProfile",
     },
   ];
 

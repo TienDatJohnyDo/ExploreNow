@@ -386,6 +386,7 @@
   width: 160px;
   border-radius: 20px;
   margin-left: 20px;
+  object-fit: cover;
 }
 
 .more-image-filter {
@@ -425,6 +426,7 @@
   width: 170px;
   height: 100px;
   margin-left: 20px;
+  object-fit: cover;
 }
 
 .h-row-1 {
@@ -531,10 +533,11 @@
 
 
   .comment-text-box {
-    position: relative;
+    position: fixed;
     bottom: 10px;
     width: 400px;
     margin-top: 30px;
+    top: 705px;
   }
   
   .comment-input {

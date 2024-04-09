@@ -27,17 +27,6 @@ const MyComponent = () => {
   //   .fill(null)
   //   .map((_, index) => <Grid item><Postcard key={index} /></Grid>);
 
-  const post1 = {
-    profilePic: laurenPic,
-    username: "Lauren",
-    image: banff1,
-    location: "Banff",
-    heartCount: "92",
-    commentCount: 7,
-    link: "/laurenPost",
-    profileLink: "/profile",
-  };
-
   const post2 = {
     profilePic: charlesPic,
     username: "Charles",
@@ -91,11 +80,10 @@ const MyComponent = () => {
           style={{ maxHeight: '750px',
                    overflow: 'auto'}}>
 
-      <Grid item><Postcard key={1} post={post1} /></Grid>
-      <Grid item><Postcard key={2} post={post2} /></Grid>
-      <Grid item><Postcard key={3} post={post3} /></Grid>
-      <Grid item><Postcard key={4} post={post4} /></Grid>
-      <Grid item><Postcard key={5} post={post5} /></Grid>
+      <Grid item><Postcard key={1} post={post2} /></Grid>
+      <Grid item><Postcard key={2} post={post3} /></Grid>
+      <Grid item><Postcard key={3} post={post4} /></Grid>
+      <Grid item><Postcard key={4} post={post5} /></Grid>
       {/* {components} */}
     </Grid>
   );
