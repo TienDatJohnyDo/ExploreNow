@@ -93,7 +93,7 @@ const MyComponent = () => {
 function Discover() {
   return (
     <div className="discover-container">
-      <h1 className="discover-label">Discover 2</h1>
+      <h1 className="discover-label">Discover</h1>
       <Link to="/notificationPage2" className='noti-button'>
         <FontAwesomeIcon icon={faBell} className="notification-icon" size='lg' />
       </Link>
