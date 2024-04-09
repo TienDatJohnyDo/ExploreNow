@@ -61,9 +61,9 @@ function PostTwo() {
           Add Photos
         </button>
       </div>
-      <Link to="/Collab2" onClick={() => handleNext('/Collab2')}>
+      <Link to="/Profile2" onClick={() => handleNext('/Profile2')}>
         <div className="next-button-container">
-          <button className="next-button">Next</button>
+          <button className="next-button">Done</button>
         </div>
       </Link>
     </div>
