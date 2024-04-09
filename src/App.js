@@ -113,6 +113,7 @@ import SignOutModal from './Components/SignOutModal';
 import Profile2  from './Components/Profile2';
 import Collab from './Components/collab'; 
 import Collab2 from './Components/collab2'; 
+import SavedPosts from './Components/SavedPost';
 
 /* Profile pages imports here */
 import Profile from './Components/Profile'; 
@@ -173,6 +174,7 @@ function App() {
         <Route path="/post" element={<Post />} />
         <Route path ="Collab" element ={<Collab />}/>
         <Route path ="Collab2" element ={<Collab2 />}/>
+        <Route path="/savedPost" element={<SavedPosts />} />
 
         {/* Profile pages routes here */}
         <Route path="/profile" element={<Profile />} />
