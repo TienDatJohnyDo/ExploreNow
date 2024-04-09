@@ -144,7 +144,7 @@
 }
 
 .text-input {
-  background-color: #f1f1f1;
+  background-color: white;
   border: none;
   border-bottom: 2px solid #ccc;
   padding: 10px 15px; /* Adjust vertical padding here */
@@ -157,11 +157,11 @@
 .dropdown-content {
   display: block;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: white !important;
   min-width: 350px; /* Set the minimum width of the dropdown content */
   max-height: 100px; /* Set the maximum height of the dropdown content */
   overflow-y: auto; /* Enable vertical scrolling */
-  font-size: 12px;
+  font-size: 10px;
   border: 1px solid #ddd;
   z-index: 1;
   color: black;
@@ -176,6 +176,21 @@
 .dropdown-content ul li {
   padding: 10px 15px; /* Adjust vertical padding here */
   cursor: pointer;
+}
+
+.dropdown-content ul li:hover {
+  background-color: #ddd;
+}
+.dropdown-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content ul li {
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: white; /* Set background color to white */
 }
 
 .dropdown-content ul li:hover {
