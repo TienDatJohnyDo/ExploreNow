@@ -13,9 +13,17 @@ Click this [link](https://explorenow-nine.vercel.app/) to run the deployed app
 
 ---
 ### Option 2
-cd to this project directory and run the following command in the terminal:
-
-  ### `npm start`
-
-  Runs the app in the development mode.\
+  Install Node.js from [here](https://nodejs.org/en/download/)
+  
+  cd to this project directory and run the following command in the terminal:
+  
+  Install react\
+  `npm install react`
+  
+  Install react-router-dom\
+  `npm install react-router-dom`
+  
+  Run the app in the development mode.\
+  `npm start`
+  
   Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
