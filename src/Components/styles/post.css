@@ -115,3 +115,69 @@
   padding: 70px;
   font-weight: bold;
 }
+.text-input-container {
+  /* Add padding to the top and bottom to increase the height */
+  padding: 10px 0;
+}
+
+.text-input {
+  height: 60px; /* Increase the height as desired */
+  width: 390px;
+  border-radius: 20px;
+  margin: auto;
+  background-color: white;
+  border: 2px solid #1D4061;
+  color: #1D4061;
+  text-indent: 10px;
+  font-family: 'Sen', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  position: relative;
+  padding-right: 50px; /* Add padding to the right to make space for the icon */
+  box-sizing: border-box;
+  border: 1px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.text-input {
+  background-color: #f1f1f1;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 10px 15px; /* Adjust vertical padding here */
+  font-size: 16px;
+  cursor: pointer;
+  width: 250px; /* Set the width of the dropdown */
+  color: #ccc;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 350px; /* Set the minimum width of the dropdown content */
+  max-height: 100px; /* Set the maximum height of the dropdown content */
+  overflow-y: auto; /* Enable vertical scrolling */
+  font-size: 12px;
+  border: 1px solid #ddd;
+  z-index: 1;
+  color: black;
+}
+
+.dropdown-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content ul li {
+  padding: 10px 15px; /* Adjust vertical padding here */
+  cursor: pointer;
+}
+
+.dropdown-content ul li:hover {
+  background-color: #ddd;
+}
