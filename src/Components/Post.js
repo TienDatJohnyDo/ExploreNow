@@ -51,9 +51,9 @@ function Post() {
       <div className="text-input-container">
         <select className="text-input" value={selectedCollaborator} onChange={handleCollaboratorChange}>
           <option value="">Select Collaborators</option>
-          <option value="James">Charles</option>
-          <option value="David ">David </option>
-          <option value="Stephen">Stephen </option>
+          <option value="Charles Smith">Charles Smith </option>
+          <option value="Lisa Williams ">Lisa Williams </option>
+          <option value="Nancy Brown">Nancy Brown </option>
           <option value="Alone">Alone </option>
           {/* Add more options as needed */}
         </select>
