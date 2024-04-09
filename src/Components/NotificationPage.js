@@ -9,6 +9,9 @@ import jamesPic from './images/james.jpg'
 import charlesPic from './images/charles.jpg'
 import sarahPic from './images/sarah.jpg'
 import zacPic from './images/zac.jpg'
+import aden from './images/aden.jpg'
+import laney from './images/laney.jpg'
+import emilia from './images/emilia.jpg'
 
 const CollabBox = ({pic, user, msg, onClick, boxKey}) => {
     return (
@@ -87,14 +90,14 @@ function NotifcationPage() {
   const [followBoxes, setFollowBoxes] = useState([
     <FollowBox key={1} pic={sarahPic} user={"Sarah"} />,
     <FollowBox key={2} pic={zacPic} user={"Zac"} />,
-    <FollowBox key={3} pic={zacPic} user={"Emily"} />,
+    <FollowBox key={3} pic={emilia} user={"Emilia"} />,
     // Add more FollowBox components here
   ]);
  
   const [collabBoxes, setCollabBoxes] = useState([
-    <CollabBox key={1} pic={laurenPic} user={"User 1"} msg={"Jasper Trip"} />,
-    <CollabBox key={2} pic={laurenPic} user={"User 2"} msg={"Banff Trip"} />,
-    <CollabBox key={3} pic={laurenPic} user={"User 2"} msg={"Banff Trip"} />
+    <CollabBox key={1} pic={maryPic} user={"Mary"} msg={"Jasper Trip"} />,
+    <CollabBox key={2} pic={aden} user={"Aden"} msg={"Banff Trip"} />,
+    <CollabBox key={3} pic={laney} user={"Laney"} msg={"Louvre Trip"} />
     // Add more FollowBox components here
   ]);
 
@@ -118,6 +121,7 @@ function NotifcationPage() {
               key={box.key}
               pic={box.props.pic}
               user={box.props.user}
+              msg={box.props.msg}
               onClick={handleCollabClick}
               boxKey={box.key}
             />

@@ -45,16 +45,18 @@ const HomePage = ({ post }) => {
             <div className='photos-box'>
                 <div className="h-column h-column-1">
                     <div className="h-rows-wrapper">
-                        <img className="h-row h-row-1" alt='first' src={post.images[0]} onClick={() => setOpen(true)}/>   
-                        <img className="h-row h-row-2" alt='second' src={post.images[1]} onClick={() => setOpen(true)}/>
+                        <img className="h-row h-row-1" alt='first' src={post.images[0]} onClick={() => setOpen(true)}/>
+                        {post.images[1] &&   
+                        <img className="h-row h-row-2" alt='second' src={post.images[1]} onClick={() => setOpen(true)}/>}
                     </div>
                 </div>
+                {post.images[2] && 
                 <div className="h-column h-column-2">
                     <img className="more-image" alt='more' src={post.images[2]} />  
                     <div className="more-image-filter" />
                     <span>+{post.images.length-2}</span>
                     <div className='empty' onClick={() => setOpen(true)}/>   
-                </div>
+                </div>}
             </div>
             <div className='description-tag'>
                 {post.date}

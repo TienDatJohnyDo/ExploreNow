@@ -1,10 +1,11 @@
 // SavedPosts.js
 import React from 'react';
 import { Grid } from '@mui/material';
-import './styles/discover.css';
-
-
+import {useNavigate} from 'react-router-dom';
+import './styles/savedPost.css';
 import Postcard from './Postcard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 
 import laurenPic from './images/lauren.jpg'
 import amiraPic from './images/amira.jpg'
@@ -68,7 +69,7 @@ const MyComponent = () => {
     <Grid container justify="center" 
           spacing={10} 
           direction="row"
-          paddingBlockEnd="50px"
+          paddingBlockEnd="70px"
           marginBlockStart="20px"
           style={{ maxHeight: '750px',
                    overflow: 'auto'}}>
@@ -84,10 +85,20 @@ const MyComponent = () => {
 };
 
 function Discover() {
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate(-1);
+  };
+
   return (
     <div className="discover-container">
-      <h1 className="discover-label">Saved Posts</h1>
-      <div className='posts-container'>
+      <div className="sp-top">
+        <FontAwesomeIcon icon={faArrowLeft} className="sp-back-button" style={{color: "#1D4061",}} 
+                          onClick={goBack}/>
+        <h1 className="sp-discover-label">Saved Posts</h1>    
+      </div>
+      <div className='sp-posts-container'>
         <MyComponent />
       </div>
     </div>

@@ -33,8 +33,8 @@ function PostThree() {
             {/* Banner */}
             <div className='banner'>
                 <div className='banner-content'>
-                    <span>Hey Lauren! <br></br></span>
-                    <span>Share your journey</span>
+                    <span className='heyLauren'>Hey Lauren! <br /></span>
+                    <span className='shareJourney'>Share your journey</span>
                 </div>
             </div>
             

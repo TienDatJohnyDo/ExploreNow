@@ -32,8 +32,6 @@ function Paris() {
       location: "Catacombs",
       heartCount: "92",
       commentCount: 7,
-      link: "/laurenPost",
-      profileLink: "/profile",
     },
     {
       profilePic: joe,
@@ -42,8 +40,6 @@ function Paris() {
       location: "Eiffel Tower",
       heartCount: "374",
       commentCount: 55,
-      link: "/charlesPost",
-      profileLink: "/charlesProfile",
     },
     {
       profilePic: kymani,
@@ -52,8 +48,6 @@ function Paris() {
       location: "La Pagode",
       heartCount: "1,302",
       commentCount: 422,
-      link: "/lisaPost",
-      profileLink: "/lisaProfile",
     },
     {
       profilePic: laney,
@@ -62,8 +56,6 @@ function Paris() {
       location: "Louvre",
       heartCount: "600",
       commentCount: 123,
-      link: "/nancyPost",
-      profileLink: "/nancyProfile",
     },
     {
       profilePic: summer,
@@ -72,8 +64,6 @@ function Paris() {
       location: "Sacre Coeur",
       heartCount: "403",
       commentCount: 192,
-      link: "/danielPost",
-      profileLink: "/danielProfile",
     },
   ];
 

@@ -24,6 +24,7 @@ const MyComponent = () => {
         heartCount: "0",
         commentCount: 0,
         notShowProfile: true,
+        link: "/laurenParisPost"
     };
 
 

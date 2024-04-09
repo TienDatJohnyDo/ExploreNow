@@ -33,8 +33,6 @@ function Tokyo() {
       location: "Meji Shrine",
       heartCount: "92",
       commentCount: 7,
-      link: "/laurenPost",
-      profileLink: "/profile",
     },
     {
       profilePic: rafael,
@@ -43,8 +41,6 @@ function Tokyo() {
       location: "Imperial Palace",
       heartCount: "374",
       commentCount: 55,
-      link: "/charlesPost",
-      profileLink: "/charlesProfile",
     },
     {
       profilePic: lindsey,
@@ -53,8 +49,6 @@ function Tokyo() {
       location: "Ghibli Museum",
       heartCount: "1,302",
       commentCount: 422,
-      link: "/lisaPost",
-      profileLink: "/lisaProfile",
     },
     {
       profilePic: breanna,
@@ -63,8 +57,6 @@ function Tokyo() {
       location: "Shibuya Crossing",
       heartCount: "600",
       commentCount: 123,
-      link: "/nancyPost",
-      profileLink: "/nancyProfile",
     },
     {
       profilePic: phillip,
@@ -73,8 +65,6 @@ function Tokyo() {
       location: "Yoyogi Park",
       heartCount: "403",
       commentCount: 192,
-      link: "/danielPost",
-      profileLink: "/danielProfile",
     },
   ];
 
