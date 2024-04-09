@@ -62,6 +62,8 @@ function Login() {
                     value={username} 
                     onChange={handleChange} 
                 />
+                <br></br>
+                <br></br>
                 <input 
                     type="password" 
                     placeholder="Password" 

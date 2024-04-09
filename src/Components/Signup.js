@@ -67,6 +67,7 @@ function SignUp() {
           value={username}
           onChange={handleChange}
         />
+        <br></br><br></br>
         <input 
           type="text" 
           placeholder="Email address" 
@@ -75,6 +76,8 @@ function SignUp() {
           value={email}
           onChange={handleChange}
         />
+        <br></br><br></br>
+
         <input 
           type="password" 
           placeholder="Password" 
@@ -83,6 +86,7 @@ function SignUp() {
           value={password}
           onChange={handleChange}
         />
+        <br></br><br></br>
         {/* Visual indicators for password validation */}
         <div className="checkbox-container">
           <label>
