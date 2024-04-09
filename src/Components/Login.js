@@ -28,7 +28,13 @@ function Login() {
         } else {
             // Add your login logic here
             // For now, just navigate to Discover
-            navigate('/discover');
+            if (username === 'Lauren') {
+                navigate('/discover'); // Navigate to Lauren's profile page
+            } else if (username === 'Charles') {
+                navigate('/discover2'); // Navigate to Charles's profile page
+            } else {
+                setError('Invalid username.'); // Show error for unknown username
+            }
         }
     };
 

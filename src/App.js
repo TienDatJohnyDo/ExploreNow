@@ -95,6 +95,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Login from "./Components/Login"; 
 import Signup from "./Components/Signup"; 
 import Discover from "./Components/Discover"; 
+import Discover2 from "./Components/discover2"; 
 import SearchPage from './Components/SearchPage';
 import Post from './Components/Post'; 
 import GuestDiscover from './Components/GuestDiscover'; 
@@ -105,10 +106,13 @@ import NavigationBar from './Components/NavigationBar';
 import Guestnavigation from './Components/Guestnavigation';
 import EntryPage from './Components/EntryPage';
 import NotifcationPage from './Components/NotificationPage';
+import NotifcationPage2 from './Components/notificationPage2';
 import PostTwo from './Components/PostTwo';
 import PostThree from './Components/PostThree';
 import SignOutModal from './Components/SignOutModal';
 import Profile2  from './Components/Profile2';
+import Collab from './Components/collab'; 
+import Collab2 from './Components/collab2'; 
 
 /* Profile pages imports here */
 import Profile from './Components/Profile'; 
@@ -118,6 +122,7 @@ import CharlesProfile from './Components/profilePages/CharlesProfile'
 import LisaProfile from './Components/profilePages/LisaProfile'
 import NancyProfile from './Components/profilePages/NancyProfile'
 import DanielProfile from './Components/profilePages/DanielProfile'
+import RealCharlesProfile from './Components/CharlesProfile';
 
 /* Postpages imports here */
 import PostPage from './Components/PostPage';
@@ -157,13 +162,17 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/discover" element={<Discover />} />
+        <Route path="/discover2" element={<Discover2 />} />
         <Route path="/searchPage" element={<SearchPage />} />
         <Route path="/GuestDiscover" element={<GuestDiscover />} />
         <Route path="/GuestSearch" element={<Guestsearch />} />
         <Route path="/GuestPost" element={<GuestPost />} />
         <Route path="/GuestProfile" element={<GuestProfile />} />
         <Route path="/notificationPage" element={<NotifcationPage />} />
+        <Route path="/notificationPage2" element={<NotifcationPage2 />} />
         <Route path="/post" element={<Post />} />
+        <Route path ="Collab" element ={<Collab />}/>
+        <Route path ="Collab2" element ={<Collab2 />}/>
 
         {/* Profile pages routes here */}
         <Route path="/profile" element={<Profile />} />
@@ -196,7 +205,7 @@ function App() {
         <Route path="/postTwo" element={<PostTwo />}></Route>
         <Route path="/postThree" element={<PostThree />}></Route>
         <Route path ="/Profile2" element = {<Profile2/>}></Route>
-        
+        <Route path ="/RealCharlesProfile" element = {<RealCharlesProfile/>}></Route>
 
         {/* Define routes for other components as needed */}
       </Routes>
